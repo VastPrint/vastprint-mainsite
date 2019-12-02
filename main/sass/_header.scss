@@ -1,0 +1,54 @@
+.header {
+
+    @include breakpoint(medium) {
+        background-image: url('../img/logo/vast_web.png');
+        background-color: white;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 900px;
+    }
+
+    .header-text {
+
+        @include breakpoint(medium) {
+            position: absolute;
+            top: 600px;
+            left: 100px;
+            vertical-align: bottom;
+
+        }
+
+        [class*='header-text'] 
+        {
+            text-align: right;
+            width:60%;
+            align-items: right;
+            float: right;
+         
+
+            @include breakpoint(medium) {
+                display: inline-block;
+                width: 200px;
+                text-align: left;
+            }
+
+        }
+
+        .header-text1 {
+            @include breakpoint(medium) {
+                float: right;
+             
+            }
+        }
+
+        .header-text2 {
+            @include breakpoint(medium) {
+                float: left;
+                
+            }
+        }
+
+    }
+
+}

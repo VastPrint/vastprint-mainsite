@@ -1,0 +1,45 @@
+
+.contact{
+    background-color:black;
+    color:white;
+    padding:10px;
+  
+    div>.contact-head{
+        font-size:1rem;
+      
+    }
+
+    div>.contact-text{
+        // margin:40px;
+        font-size:1.5rem;
+        margin-left:20px;
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+  
+    div>.contact-text>div{
+        padding:10px;
+        vertical-align: center;
+    }
+
+    div>.contact-text>div>img{
+        -webkit-filter: invert(1);
+        filter: invert(1);
+       height:2rem;
+       margin-right:1.5rem;
+       float:left;
+    }
+    div>.contact-text>div>p{
+
+       height:2rem;
+       margin-right:1.5rem;
+    }
+   
+
+  
+
+
+
+
+    
+}

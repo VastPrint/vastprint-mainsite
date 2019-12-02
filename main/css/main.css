@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid grey;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    background-image: url("img/logo/vast_web.png");
+    background-color: white;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 900px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header .header-text {
+    position: absolute;
+    top: 600px;
+    left: 100px;
+    vertical-align: bottom;
+  }
+}
+
+.header .header-text [class*='header-text'] {
+  text-align: right;
+  width: 60%;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  float: right;
+}
+
+@media only screen and (min-width: 768px) {
+  .header .header-text [class*='header-text'] {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header .header-text .header-text1 {
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header .header-text .header-text2 {
+    float: left;
+  }
+}
+
+.commercial {
+  background-color: black;
+  position: relative;
+}
+
+@media only screen and (min-width: 600px) {
+  .commercial {
+    height: 80vw;
+  }
+  .commercial .left-0 {
+    left: 5vw;
+  }
+  .commercial .left-1 {
+    left: 20vw;
+  }
+  .commercial .left-2 {
+    left: 39vw;
+  }
+  .commercial .left-3 {
+    left: 58vw;
+  }
+  .commercial .left-4 {
+    left: 77vw;
+  }
+}
+
+.commercial .commercial-text {
+  padding: 8vw;
+}
+
+@media only screen and (min-width: 600px) {
+  .commercial .commercial-text {
+    position: absolute;
+    height: 40vw;
+    width: 30vw;
+    padding: 0;
+    margin-top: 3vw;
+  }
+}
+
+.commercial .commercial-text * {
+  color: white;
+  margin-top: 2vw;
+}
+
+.commercial .commercial-text h1 {
+  font-size: 4rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .commercial .commercial-text h1 {
+    font-size: 5vw;
+  }
+}
+
+.commercial .commercial-text p, .commercial .commercial-text a {
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .commercial .commercial-text p, .commercial .commercial-text a {
+    font-size: 1vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .commercial [id*="commercial-img"] {
+    width: 20vw;
+    padding: 1vw;
+    position: absolute;
+  }
+  .commercial #commercial-img_1_1 {
+    top: 38vw;
+  }
+  .commercial #commercial-img_2_1 {
+    top: 17vw;
+  }
+  .commercial #commercial-img_2_2 {
+    top: 30vw;
+  }
+  .commercial #commercial-img_2_3 {
+    top: 43vw;
+  }
+  .commercial #commercial-img_3_1 {
+    top: 21vw;
+  }
+  .commercial #commercial-img_3_2 {
+    top: 46.5vw;
+  }
+  .commercial #commercial-img_3_3 {
+    top: 60vw;
+  }
+  .commercial #commercial-img_4_1 {
+    top: 35vw;
+  }
+}
+
+.contact {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.contact div .contact-head {
+  font-size: 1rem;
+}
+
+.contact div .contact-text {
+  font-size: 1.5rem;
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contact div .contact-text p {
+  padding: 10px;
+}
+
+.contact .contact-facebook::before {
+  content: url("img/icon/facebook.png");
+}
+/*# sourceMappingURL=main.css.map */

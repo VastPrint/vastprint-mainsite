@@ -1,0 +1,32 @@
+.footer{
+    background:rgb(204,204,204);
+
+    div[class*="col-"]{
+        padding:30px 50px;
+
+
+        .footer-head{
+            font-size:2rem;
+            margin-bottom:1rem;
+            font-weight:bold;
+    
+        }
+        .footer-text{
+            font-size:1.5rem;
+            @include breakpoint($breakpoint-sm){
+                font-size:1rem;
+            }
+    
+            img{
+                height:2.5rem;
+                margin-right:1rem;
+            }
+        }
+    }
+
+    
+
+
+   
+   
+}

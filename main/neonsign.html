@@ -12,88 +12,88 @@
         div {
             border: 1px solid red;
         }
-        .neoImg{
-            background-image: url('img/commercial/commercial4.jpg');
-            background-size:cover;
-            background-repeat: no-repeat;
-            height:300px;
-            line-height: 300px;
-      
-  text-align: center;
 
+        .neoImg {
+            background-image: url('img/commercial/commercial4.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
         }
-        #neonSign{
+
+        #neonSign {
             vertical-align: middle;
         }
     </style>
     <script>
-        window.onload= ()=>{
-            
-
-            let neonSize=0;
-            let neonFont="Times";
-            let neonColor="Red";
-            let neonText="Yes";
-
-            let neonSign=document.getElementById('neonSign');
-          
-            neonSign.innerHTML=neonText;
-
-            let neonSmallBtn=document.getElementById('neonSmallBtn');
-            let neonMediumBtn=document.getElementById('neonMediumBtn');
-            let neonLargeBtn=document.getElementById('neonLargeBtn');
-            let neonRedBtn=document.getElementById('neonRedBtn');
-            let neonYellowBtn=document.getElementById('neonYellowBtn');
-            let neonBlueBtn=document.getElementById('neonBlueBtn');
-            let neonGreenBtn=document.getElementById('neonGreenBtn');
-            let neonDarkBtn=document.getElementById('neonDarkBtn');
+        window.onload = () => {
 
 
-            let neonTextArea=document.getElementById('neonTextArea');
-            let neonTextBtn=document.getElementById('neonTextBtn');
+            let neonSize = 0;
+            let neonFont = "Times";
+            let neonColor = "Red";
+            let neonText = "Yes";
 
-            neonSmallBtn.onclick=()=>{
-                neonSign.style.fontSize='10px';
-         
-            }
+            let neonSign = document.getElementById('neonSign');
 
-            neonMediumBtn.onclick=()=>{
-                neonSign.style.fontSize='30px';
-            }
+            neonSign.innerHTML = neonText;
 
-            neonLargeBtn.onclick=()=>{
-                neonSign.style.fontSize='50px';
-            }
-            neonRedBtn.onclick=()=>{
-                neonSign.style.color='Red';
+            let neonSmallBtn = document.getElementById('neonSmallBtn');
+            let neonMediumBtn = document.getElementById('neonMediumBtn');
+            let neonLargeBtn = document.getElementById('neonLargeBtn');
+            let neonRedBtn = document.getElementById('neonRedBtn');
+            let neonYellowBtn = document.getElementById('neonYellowBtn');
+            let neonBlueBtn = document.getElementById('neonBlueBtn');
+            let neonGreenBtn = document.getElementById('neonGreenBtn');
+            let neonDarkBtn = document.getElementById('neonDarkBtn');
+
+
+            let neonTextArea = document.getElementById('neonTextArea');
+            let neonTextBtn = document.getElementById('neonTextBtn');
+
+            neonSmallBtn.onclick = () => {
+                neonSign.style.fontSize = '10px';
 
             }
-            neonGreenBtn.onclick=()=>{
-        
-                neonSign.style.color='Green';
+
+            neonMediumBtn.onclick = () => {
+                neonSign.style.fontSize = '30px';
+            }
+
+            neonLargeBtn.onclick = () => {
+                neonSign.style.fontSize = '50px';
+            }
+            neonRedBtn.onclick = () => {
+                neonSign.style.color = 'Red';
 
             }
-            neonDarkBtn.onclick=()=>{
-     
-                neonSign.style.color='Black';
+            neonGreenBtn.onclick = () => {
+
+                neonSign.style.color = 'Green';
 
             }
-            neonYellowBtn.onclick=()=>{
-          
-                neonSign.style.color='Yellow';
+            neonDarkBtn.onclick = () => {
+
+                neonSign.style.color = 'Black';
 
             }
-            neonBlueBtn.onclick=()=>{
-         
-                neonSign.style.color='Blue';
+            neonYellowBtn.onclick = () => {
+
+                neonSign.style.color = 'Yellow';
 
             }
-            neonTextBtn.onclick = ()=>{
-                neonSign.innerText=neonTextArea.value;
+            neonBlueBtn.onclick = () => {
+
+                neonSign.style.color = 'Blue';
+
             }
-            
+            neonTextBtn.onclick = () => {
+                neonSign.innerText = neonTextArea.value;
+            }
+
         }
-    
+
     </script>
 </head>
 
@@ -107,7 +107,7 @@
                     </div>
                     <div class="neoImg">
                         <div id="neonSign"> </div>
-                        
+
                     </div>
                 </div>
 

@@ -1,0 +1,115 @@
+.commercial {
+
+    background-color: black;
+    position: relative;
+
+    @include breakpoint($breakpoint-sm) {
+        height: 80vw;
+
+        .left-0 {
+            left: 5vw;
+        }
+
+        .left-1 {
+            left: 20vw;
+        }
+
+        .left-2 {
+            left: 39vw;
+        }
+
+        .left-3 {
+            left: 58vw;
+        }
+
+        .left-4 {
+            left: 77vw;
+        }
+    }
+
+    .commercial-text {
+
+        padding: 8vw;
+
+        @include breakpoint($breakpoint-sm) {
+            position: absolute;
+            height: 40vw;
+            width: 30vw;
+            padding: 0;
+            margin-top:3vw;
+        }
+
+
+        * {
+            color: white;
+            margin-top: 2vw;
+        }
+
+        h1 {
+            font-size: 4rem;
+            @include breakpoint($breakpoint-sm) {
+                font-size: 5vw;
+            
+            }
+        }
+
+        p,a {
+            font-size: 1.5rem;
+            @include breakpoint($breakpoint-sm) {
+                font-size: 1vw;
+            }
+        }
+
+    }
+
+    @include breakpoint($breakpoint-sm) {
+
+
+        [id*="commercial-img"] {
+            width: 20vw;
+            padding: 1vw;
+            position: absolute;
+
+
+        }
+
+        #commercial-img_1_1 {
+            top: 38vw;
+        }
+
+        #commercial-img_2_1 {
+            top: 17vw;
+
+        }
+
+        #commercial-img_2_2 {
+            top: 30vw;
+        }
+
+        #commercial-img_2_3 {
+            top: 43vw;
+        }
+
+        #commercial-img_3_1 {
+            top: 21vw;
+
+        }
+
+        #commercial-img_3_2 {
+            top: 46.5vw;
+        }
+
+        #commercial-img_3_3 {
+            top: 60vw;
+        }
+
+        #commercial-img_4_1 {
+            top: 35vw;
+        }
+
+    }
+
+
+
+
+}
