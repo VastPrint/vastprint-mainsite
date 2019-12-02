@@ -69,6 +69,26 @@
   color: grey;
 }
 
+.bg-red {
+  background-color: rgba(252, 79, 82, 0.9);
+}
+
+.bg-yellow {
+  background-color: rgba(254, 226, 91, 0.9);
+}
+
+.bg-blue {
+  background-color: rgba(82, 168, 252, 0.9);
+}
+
+.bg-green {
+  background-color: rgba(87, 253, 131, 0.9);
+}
+
+.bg-dark {
+  background-color: rgba(21, 1, 1, 0.9);
+}
+
 @media only screen and (min-width: 768px) {
   .header {
     background-image: url("../img/logo/vast_web.png");
@@ -116,6 +136,74 @@
   .header .header-text .header-text2 {
     float: left;
   }
+}
+
+.customise {
+  background-color: black;
+  color: white;
+}
+
+.customise .customise-canvas .customise-canvas-head {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.customise .customise-canvas .customise-canvas-body {
+  background-image: url("../img/customise/customise1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 300px;
+}
+
+.customise .customise-canvas .customise-canvas-body .customise-canvas-phrase {
+  color: black;
+}
+
+.customise .customise-panel {
+  padding: 50px;
+}
+
+.customise .customise-panel [class*="customise-panel-"] {
+  margin-bottom: 20px;
+}
+
+.customise .customise-panel [class*="customise-panel-"] lable {
+  display: block;
+  margin-left: -10px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.customise .customise-panel .customise-size-btn {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border: 0.5px white solid;
+  border-radius: 5px;
+  margin-right: 30px;
+  padding: 3px 15px;
+  font-size: 1.5rem;
+}
+
+.customise .customise-panel .customise-size-btn:hover {
+  cursor: pointer;
+}
+
+.customise .customise-panel .customise-color-btn {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border: 0.5px white solid;
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.customise .customise-panel .customise-color-btn:hover {
+  cursor: pointer;
 }
 
 .commercial {

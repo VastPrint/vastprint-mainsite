@@ -1,0 +1,81 @@
+.customise {
+    background-color: black;
+    color: white;
+
+
+    .customise-canvas {
+        .customise-canvas-head {
+
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .customise-canvas-body {
+            background-image: url('../img/customise/customise1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            height: 300px;
+
+            .customise-canvas-phrase {
+                // margin-top:50%;
+
+                color: black;
+            }
+
+        }
+    }
+
+    .customise-panel {
+        padding:50px;   
+        [class*="customise-panel-"]{
+            margin-bottom: 20px;
+
+            lable{
+                display: block;
+                margin-left: -10px;;
+                margin-bottom:10px;
+                font-size:2rem;
+                font-weight: bold;
+            }
+      
+          
+        }
+
+     
+        .customise-size-btn {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border: 0.5px white solid;
+            border-radius: 5px;
+
+            margin-right: 30px;
+
+            padding: 3px 15px;
+            font-size:1.5rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .customise-color-btn{
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border: 0.5px white solid;
+            border-radius: 5px;
+            height:40px;
+            width: 40px;;
+            margin-right: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+
+
+    }
+
+}
