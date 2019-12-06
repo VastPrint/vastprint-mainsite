@@ -8,6 +8,9 @@
 
     <!-- bootstrap core css-->
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/screen-styles.css">
+    <link rel="stylesheet" media="screen and (orientation: portrait)" href="portrait-screen.css" />
+
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/control.css">
@@ -100,36 +103,24 @@
     </div>
 
     <div class="container-fluid">
-        <div class="unit_bg">
-            <div class="row">
-                <div class="display_title">
-                    <h1>——</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="display_title">
-                    <h1>Display Units</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="display_content">
-                    <p>Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="learn_style">
-                    <a href="http://google.com" target="_blank">
-                        <p>Learn more</p>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="display_link">
-                    <a href="http://google.com" target="_blank">
-                        <p>Here is the link to Vast Print</p>
-                    </a>
-                </div>
-            </div>
+        <div class="row">
+            <h1 class="display_rung">—</h1>
+        </div>
+        <div class="row">
+            <h1 class="display_title">Display Units</h1>
+        </div>
+        <div class="row">
+            <p id="CompanyContent" class="display_content">Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an</p>
+        </div>
+        <div class="row">
+            <a id="learnContent" class="learn_style" href="http://google.com" target="_blank">Learn more
+            </a>
+        </div>
+        <div class="row">
+            <a class="display_link" href="http://google.com" target="_blank">Here is the link to Vast Print
+            </a>
+        </div>
+        <div class="row">
             <img src="img/display/display1.jpg" class="img-fluid col-sm-1-5">
             <img src="img/display/display2.jpg" class="img-fluid col-sm-1-5">
             <img src="img/display/display3.jpg" class="img-fluid col-sm-1-5">
@@ -138,24 +129,18 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="unit_bg"></div>
-    </div>
-
     <div class="container-fluid" >
-        <div class="client_bg">
-            <h1 class="text-center client_title">——</h1>
-            <h1 class="text-center client_title">Featured Client</h1>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
-                    <img src="img/clients/chattime.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
-                    <img src="img/clients/armstrong.jpg" class="img-fluid" alt="Responsive image">
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
-                    <img src="img/clients/fletcher.jpg" class="img-fluid" alt="Responsive image">
-                </div>
+        <h1 class="text-center client_rung">—</h1>
+        <h1 class="text-center client_title">Featured Client</h1>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                <img src="img/clients/chattime.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                <img src="img/clients/armstrong.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                <img src="img/clients/fletcher.jpg" class="img-fluid" alt="Responsive image">
             </div>
         </div>
     </div>
@@ -179,13 +164,19 @@
         window.onload = () => {
             const p_large = document.getElementById('promotion_large');
             const p_small = document.getElementById('promotion_small');
+            const company_content = document.getElementById('CompanyContent');
+            const learn_content = document.getElementById('learnContent');
             function myFunction(x){
                 if (x.matches) {
                     p_large.style.display = "none";
                     p_small.style.display = "block";
+                    company_content.innerHTML = "Vast is a company Lorem Ipsum is simply dummy text of the";
+                    learn_content.innerHTML = "Learn"
                 } else {
                     p_large.style.display = "block";
                     p_small.style.display = "none";
+                    company_content.innerHTML = "Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an"
+                    learn_content.innerHTML = "Learn more"
                 }
             }
 
