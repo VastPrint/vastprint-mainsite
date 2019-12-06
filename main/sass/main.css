@@ -6,12 +6,7 @@
   border: 1px solid grey;
 }
 
-*::before {
-  margin: 0;
-  padding: 0;
-}
-
-*::after {
+*::before, *::after {
   margin: 0;
   padding: 0;
 }
@@ -29,7 +24,6 @@
 @media only screen and (min-width: 600px) {
   [class*="col-"] {
     float: left;
-    padding: 15px;
   }
 }
 
@@ -145,10 +139,23 @@
 @media only screen and (min-width: 600px) {
   .header .header-content .header-logo-main {
     position: absolute;
-    font-size: initial;
     font-size: 15vw;
     -webkit-transform: translateY(40vh) translateX(-30vw);
             transform: translateY(40vh) translateX(-30vw);
+  }
+}
+
+.header .header-content .header-logo-main .header-logo-main-base {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .header .header-content .header-logo-main .header-logo-main-base {
+    position: absolute;
+    display: block;
+    color: black;
+    -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
   }
 }
 
@@ -259,6 +266,26 @@
 
 .customise .customise-panel .customise-color-btn:hover {
   cursor: pointer;
+}
+
+.customise .customise-panel #customise-font-sel {
+  background-color: black;
+  color: white;
+  width: 200px;
+}
+
+.customise .customise-panel #customise-phrase-text {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  background: black;
+  color: white;
+}
+
+.customise .customise-panel .customise-phrase-submit {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .commercial {

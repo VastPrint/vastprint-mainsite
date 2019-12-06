@@ -22,7 +22,7 @@
         right: 0;
         margin-bottom: 15vw;
         text-align: right;
-    
+
 
 
         @include breakpoint($breakpoint-sm) {
@@ -46,16 +46,29 @@
         .header-logo-main {
             font-size: 30vw;
 
+
             @include breakpoint($breakpoint-sm) {
                 position: absolute;
-                font-size: initial;
                 font-size: 15vw;
-
                 transform: translateY(40vh) translateX(-30vw);
 
+            }
+
+ 
+
+            .header-logo-main-base {
+                display: none;
+
+                @include breakpoint($breakpoint-sm) {
+                    position: absolute;
+                    display: block;
+                    color: black;
+                    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+                }
 
 
             }
+
 
         }
 
@@ -67,7 +80,7 @@
                 font-size: 3.5vw;
                 transform: translateY(60vh) translateX(-30vw);
 
-            
+
 
             }
 
@@ -78,9 +91,10 @@
 
             @include breakpoint($breakpoint-sm) {
                 position: absolute;
-                font-size:   1.5vw;;
+                font-size: 1.5vw;
+                ;
                 transform: translateY(80vh) translateX(-60vw);
-                color:black;   
+                color: black;
             }
         }
 
@@ -92,8 +106,8 @@
                 position: absolute;
                 font-size: 1.5vw;
                 transform: translateY(87vh) translateX(-80vw);
-                color:black;
-        
+                color: black;
+
             }
 
         }

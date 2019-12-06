@@ -2,16 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-      border:1px solid grey;
+    border: 1px solid grey;
 }
-*::before{
+
+*::before,*::after {
     margin: 0;
     padding: 0;
 }
-*::after{
-    margin: 0;
-    padding: 0;
-}
+
+
 
 .row::after {
     content: "";
@@ -21,9 +20,10 @@
 
 [class*="col-"] {
     width: 100%;
+
     @include breakpoint($breakpoint-sm) {
         float: left;
-        padding: 15px;
+
     }
 }
 
