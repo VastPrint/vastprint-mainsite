@@ -1,54 +1,104 @@
 .header {
 
-    @include breakpoint(medium) {
-        background-image: url('../img/logo/vast_web.png');
-        background-color: white;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-        background-position: right;
-        height: 900px;
+
+    position: relative;
+    height: 100vh;
+    color: white;
+
+    background-color: white;
+    background-image: url('../img/logo/vast_bg_m.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include breakpoint($breakpoint-sm) {
+        background-image: none;
     }
 
-    .header-text {
 
-        @include breakpoint(medium) {
+    .header-content {
+        // border:red 10px solid;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 15vw;
+        text-align: right;
+    
+
+
+        @include breakpoint($breakpoint-sm) {
+
+            background-image: url('../img/logo/vast_bg_m.jpg');
+            background-size: cover;
+            background-position: right;
+
             position: absolute;
-            top: 600px;
-            left: 100px;
-            vertical-align: bottom;
+            right: 0;
+            bottom: initial;
+            margin-bottom: initial;
+
+            height: 100%;
+            width: 60%;
+        }
+
+
+
+
+        .header-logo-main {
+            font-size: 30vw;
+
+            @include breakpoint($breakpoint-sm) {
+                position: absolute;
+                font-size: initial;
+                font-size: 15vw;
+
+                transform: translateY(40vh) translateX(-30vw);
+
+
+
+            }
 
         }
 
-        [class*='header-text'] 
-        {
-            text-align: right;
-            width:60%;
-            align-items: right;
-            float: right;
-         
+        .header-logo-sub {
+            font-size: 10vw;
 
-            @include breakpoint(medium) {
-                display: inline-block;
-                width: 200px;
-                text-align: left;
+            @include breakpoint($breakpoint-sm) {
+                position: absolute;
+                font-size: 3.5vw;
+                transform: translateY(60vh) translateX(-30vw);
+
+            
+
             }
 
         }
 
         .header-text1 {
-            @include breakpoint(medium) {
-                float: right;
-             
+            font-size: 3.5vw;
+
+            @include breakpoint($breakpoint-sm) {
+                position: absolute;
+                font-size:   1.5vw;;
+                transform: translateY(80vh) translateX(-60vw);
+                color:black;   
             }
         }
 
         .header-text2 {
-            @include breakpoint(medium) {
-                float: left;
-                
+            font-size: 3.5vw;
+
+            @include breakpoint($breakpoint-sm) {
+
+                position: absolute;
+                font-size: 1.5vw;
+                transform: translateY(87vh) translateX(-80vw);
+                color:black;
+        
             }
+
         }
 
     }
+
 
 }

@@ -2,14 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    //   border:1px solid grey;
+      border:1px solid grey;
+}
+*::before{
+    margin: 0;
+    padding: 0;
+}
+*::after{
+    margin: 0;
+    padding: 0;
 }
 
 .row::after {
     content: "";
     clear: both;
     display: block;
-
 }
 
 [class*="col-"] {

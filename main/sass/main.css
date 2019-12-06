@@ -3,6 +3,17 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 1px solid grey;
+}
+
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+*::after {
+  margin: 0;
+  padding: 0;
 }
 
 .row::after {
@@ -89,52 +100,96 @@
   background-color: rgba(21, 1, 1, 0.9);
 }
 
-@media only screen and (min-width: 768px) {
+.header {
+  position: relative;
+  height: 100vh;
+  color: white;
+  background-color: white;
+  background-image: url("../img/logo/vast_bg_m.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 600px) {
   .header {
-    background-image: url("../img/logo/vast_web.png");
-    background-color: white;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: right;
-    height: 900px;
+    background-image: none;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .header .header-text {
-    position: absolute;
-    top: 600px;
-    left: 100px;
-    vertical-align: bottom;
-  }
-}
-
-.header .header-text [class*='header-text'] {
+.header .header-content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 15vw;
   text-align: right;
-  width: 60%;
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
-  float: right;
 }
 
-@media only screen and (min-width: 768px) {
-  .header .header-text [class*='header-text'] {
-    display: inline-block;
-    width: 200px;
-    text-align: left;
+@media only screen and (min-width: 600px) {
+  .header .header-content {
+    background-image: url("../img/logo/vast_bg_m.jpg");
+    background-size: cover;
+    background-position: right;
+    position: absolute;
+    right: 0;
+    bottom: initial;
+    margin-bottom: initial;
+    height: 100%;
+    width: 60%;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .header .header-text .header-text1 {
-    float: right;
+.header .header-content .header-logo-main {
+  font-size: 30vw;
+}
+
+@media only screen and (min-width: 600px) {
+  .header .header-content .header-logo-main {
+    position: absolute;
+    font-size: initial;
+    font-size: 15vw;
+    -webkit-transform: translateY(40vh) translateX(-30vw);
+            transform: translateY(40vh) translateX(-30vw);
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .header .header-text .header-text2 {
-    float: left;
+.header .header-content .header-logo-sub {
+  font-size: 10vw;
+}
+
+@media only screen and (min-width: 600px) {
+  .header .header-content .header-logo-sub {
+    position: absolute;
+    font-size: 3.5vw;
+    -webkit-transform: translateY(60vh) translateX(-30vw);
+            transform: translateY(60vh) translateX(-30vw);
+  }
+}
+
+.header .header-content .header-text1 {
+  font-size: 3.5vw;
+}
+
+@media only screen and (min-width: 600px) {
+  .header .header-content .header-text1 {
+    position: absolute;
+    font-size: 1.5vw;
+    -webkit-transform: translateY(80vh) translateX(-60vw);
+            transform: translateY(80vh) translateX(-60vw);
+    color: black;
+  }
+}
+
+.header .header-content .header-text2 {
+  font-size: 3.5vw;
+}
+
+@media only screen and (min-width: 600px) {
+  .header .header-content .header-text2 {
+    position: absolute;
+    font-size: 1.5vw;
+    -webkit-transform: translateY(87vh) translateX(-80vw);
+            transform: translateY(87vh) translateX(-80vw);
+    color: black;
   }
 }
 
