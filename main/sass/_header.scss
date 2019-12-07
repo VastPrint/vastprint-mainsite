@@ -1,6 +1,5 @@
 .header {
     position: relative;
-    height: 100vh;
     background-color: white;
 
     .header-logo {
@@ -12,12 +11,16 @@
     @media only screen and (max-width:768px) {
 
         display: flex;
-        flex-direction: column nowrap;
+        flex-direction: column;
+        flex-wrap: nowrap;
         justify-content: flex-end;
         align-items: flex-end;
         align-content: flex-end;
 
+        height: 100vh;
         min-height: 120vw;
+
+
         padding-right: 5vw;
         padding-bottom: 10vw;
 
@@ -56,16 +59,11 @@
     }
 
 
+    @media only screen and (min-width:768px) {
+        height: 60vw;
+        // max-height: 100vh;
 
-
-
-    .header-content {
-
-
-
-
-
-        @include breakpoint($breakpoint-md) {
+        .header-content {
 
             background-image: url('../img/logo/vast_bg_m.jpg');
             background-size: cover;
@@ -79,80 +77,80 @@
             height: 100%;
             width: 60%;
         }
-    }
 
-
-
-
-    .header-logo-main {
-
-
-
-        @include breakpoint($breakpoint-md) {
+        .header-logo {
             position: absolute;
-            font-size: 15vw;
-            transform: translateY(40vh) translateX(-30vw);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
 
+            text-align: right;
+            color: white;
+
+            top: 30%;
+            left: 25%;
+
+
+            .header-logo-main {
+                position: relative;
+                font-size: 15vw;
+
+                .header-logo-main-base {
+                    position: absolute;
+                    color: black;
+                    clip-path: polygon(0 0, 39.6% 0, 39.6% 100%, 0 100%);
+                }
+            }
+
+            .header-logo-sub {
+                font-size: 2.6vw;
+                transform: translateY(-5vw);
+
+
+            }
         }
 
 
+        .header-text {
+            position: absolute;
+            display: flex;
+            flex-direction: row-reverse;
 
-        .header-logo-main-base {
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: flex-end;
+            align-content: flex-end;
 
 
-            @include breakpoint($breakpoint-md) {
-                position: absolute;
+            text-align: left;
+
+            top: 75%;
+            left:5%;
+            color: gray;
+            font-size: 1.2vw;
+            // font-weight: bold;
+
+            .header-text1 {
                 display: block;
-                color: black;
-                clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+
+            }
+
+            .header-text2 {
+                display: block;
+                margin-right: 5vw;
             }
 
 
-        }
-
-
-    }
-
-    .header-logo-sub {
-
-
-        @include breakpoint($breakpoint-md) {
-            position: absolute;
-            font-size: 3.5vw;
-            transform: translateY(60vh) translateX(-30vw);
-
-
 
         }
 
     }
 
 
-    .header-text1 {
-        font-size: 3.5vw;
 
-        @include breakpoint($breakpoint-md) {
-            position: absolute;
-            font-size: 1.5vw;
-            ;
-            transform: translateY(80vh) translateX(-60vw);
-            color: black;
-        }
-    }
 
-    .header-text2 {
-        font-size: 3.5vw;
 
-        @include breakpoint($breakpoint-md) {
 
-            position: absolute;
-            font-size: 1.5vw;
-            transform: translateY(87vh) translateX(-80vw);
-            color: black;
-
-        }
-
-    }
 
 
 }

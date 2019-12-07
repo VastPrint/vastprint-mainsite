@@ -95,7 +95,6 @@
 
 .header {
   position: relative;
-  height: 100vh;
   background-color: white;
 }
 
@@ -110,8 +109,10 @@
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column nowrap;
-            flex-direction: column nowrap;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -120,6 +121,7 @@
             align-items: flex-end;
     -ms-flex-line-pack: end;
         align-content: flex-end;
+    height: 100vh;
     min-height: 120vw;
     padding-right: 5vw;
     padding-bottom: 10vw;
@@ -146,6 +148,9 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .header {
+    height: 60vw;
+  }
   .header .header-content {
     background-image: url("../img/logo/vast_bg_m.jpg");
     background-size: cover;
@@ -157,61 +162,68 @@
     height: 100%;
     width: 60%;
   }
-}
-
-@media only screen and (min-width: 768px) {
-  .header .header-logo-main {
+  .header .header-logo {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    text-align: right;
+    color: white;
+    top: 30%;
+    left: 25%;
+  }
+  .header .header-logo .header-logo-main {
+    position: relative;
     font-size: 15vw;
-    -webkit-transform: translateY(40vh) translateX(-30vw);
-            transform: translateY(40vh) translateX(-30vw);
   }
-}
-
-@media only screen and (min-width: 768px) {
-  .header .header-logo-main .header-logo-main-base {
+  .header .header-logo .header-logo-main .header-logo-main-base {
     position: absolute;
+    color: black;
+    -webkit-clip-path: polygon(0 0, 39.6% 0, 39.6% 100%, 0 100%);
+            clip-path: polygon(0 0, 39.6% 0, 39.6% 100%, 0 100%);
+  }
+  .header .header-logo .header-logo-sub {
+    font-size: 2.6vw;
+    -webkit-transform: translateY(-5vw);
+            transform: translateY(-5vw);
+  }
+  .header .header-text {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    text-align: left;
+    top: 75%;
+    left: 5%;
+    color: gray;
+    font-size: 1.2vw;
+  }
+  .header .header-text .header-text1 {
     display: block;
-    color: black;
-    -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
   }
-}
-
-@media only screen and (min-width: 768px) {
-  .header .header-logo-sub {
-    position: absolute;
-    font-size: 3.5vw;
-    -webkit-transform: translateY(60vh) translateX(-30vw);
-            transform: translateY(60vh) translateX(-30vw);
-  }
-}
-
-.header .header-text1 {
-  font-size: 3.5vw;
-}
-
-@media only screen and (min-width: 768px) {
-  .header .header-text1 {
-    position: absolute;
-    font-size: 1.5vw;
-    -webkit-transform: translateY(80vh) translateX(-60vw);
-            transform: translateY(80vh) translateX(-60vw);
-    color: black;
-  }
-}
-
-.header .header-text2 {
-  font-size: 3.5vw;
-}
-
-@media only screen and (min-width: 768px) {
-  .header .header-text2 {
-    position: absolute;
-    font-size: 1.5vw;
-    -webkit-transform: translateY(87vh) translateX(-80vw);
-            transform: translateY(87vh) translateX(-80vw);
-    color: black;
+  .header .header-text .header-text2 {
+    display: block;
+    margin-right: 5vw;
   }
 }
 
