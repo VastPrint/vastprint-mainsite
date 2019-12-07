@@ -1,31 +1,71 @@
 .header {
-
-
     position: relative;
     height: 100vh;
-    color: white;
-
     background-color: white;
-    background-image: url('../img/logo/vast_bg_m.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
 
-    @include breakpoint($breakpoint-sm) {
-        background-image: none;
+    .header-logo {
+        font-family: 'Maven Pro', sans-serif;
     }
 
 
-    .header-content {
-        // border:red 10px solid;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        margin-bottom: 15vw;
+
+    @media only screen and (max-width:768px) {
+
+        display: flex;
+        flex-direction: column nowrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+        align-content: flex-end;
+
+        min-height: 120vw;
+        padding-right: 5vw;
+        padding-bottom: 10vw;
+
+
+        background-image: url('../img/logo/vast_bg_m.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        color: white;
         text-align: right;
 
 
+        .header-logo {
 
-        @include breakpoint($breakpoint-sm) {
+            .header-logo-main {
+                font-size: 28vw;
+
+                .header-logo-main-base {
+                    display: none;
+                }
+            }
+
+            .header-logo-sub {
+                font-size: 8vw;
+                transform: translateY(-10vw);
+
+
+            }
+        }
+
+        .header-text {
+            font-size: 3.5vw;
+
+        }
+
+    }
+
+
+
+
+
+    .header-content {
+
+
+
+
+
+        @include breakpoint($breakpoint-md) {
 
             background-image: url('../img/logo/vast_bg_m.jpg');
             background-size: cover;
@@ -39,76 +79,76 @@
             height: 100%;
             width: 60%;
         }
+    }
 
 
 
 
-        .header-logo-main {
-            font-size: 30vw;
+    .header-logo-main {
 
 
-            @include breakpoint($breakpoint-sm) {
-                position: absolute;
-                font-size: 15vw;
-                transform: translateY(40vh) translateX(-30vw);
 
-            }
-
- 
-
-            .header-logo-main-base {
-                display: none;
-
-                @include breakpoint($breakpoint-sm) {
-                    position: absolute;
-                    display: block;
-                    color: black;
-                    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-                }
-
-
-            }
-
+        @include breakpoint($breakpoint-md) {
+            position: absolute;
+            font-size: 15vw;
+            transform: translateY(40vh) translateX(-30vw);
 
         }
 
-        .header-logo-sub {
-            font-size: 10vw;
 
-            @include breakpoint($breakpoint-sm) {
+
+        .header-logo-main-base {
+
+
+            @include breakpoint($breakpoint-md) {
                 position: absolute;
-                font-size: 3.5vw;
-                transform: translateY(60vh) translateX(-30vw);
-
-
-
-            }
-
-        }
-
-        .header-text1 {
-            font-size: 3.5vw;
-
-            @include breakpoint($breakpoint-sm) {
-                position: absolute;
-                font-size: 1.5vw;
-                ;
-                transform: translateY(80vh) translateX(-60vw);
+                display: block;
                 color: black;
+                clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
             }
+
+
         }
 
-        .header-text2 {
+
+    }
+
+    .header-logo-sub {
+
+
+        @include breakpoint($breakpoint-md) {
+            position: absolute;
             font-size: 3.5vw;
+            transform: translateY(60vh) translateX(-30vw);
 
-            @include breakpoint($breakpoint-sm) {
 
-                position: absolute;
-                font-size: 1.5vw;
-                transform: translateY(87vh) translateX(-80vw);
-                color: black;
 
-            }
+        }
+
+    }
+
+
+    .header-text1 {
+        font-size: 3.5vw;
+
+        @include breakpoint($breakpoint-md) {
+            position: absolute;
+            font-size: 1.5vw;
+            ;
+            transform: translateY(80vh) translateX(-60vw);
+            color: black;
+        }
+    }
+
+    .header-text2 {
+        font-size: 3.5vw;
+
+        @include breakpoint($breakpoint-md) {
+
+            position: absolute;
+            font-size: 1.5vw;
+            transform: translateY(87vh) translateX(-80vw);
+            color: black;
 
         }
 

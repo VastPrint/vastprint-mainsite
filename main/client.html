@@ -8,8 +8,8 @@
 
     <!-- bootstrap core css-->
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/screen-styles.css">
-    <link rel="stylesheet" media="screen and (orientation: portrait)" href="portrait-screen.css" />
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
 
 
     <link rel="stylesheet" href="css/style.css">
@@ -18,8 +18,32 @@
     <link rel="stylesheet" href="css/feature_client.css">
     <link rel="stylesheet" href="css/display_units.css">
 
-
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+            window.onload = () => {
+                const p_large = document.getElementById('promotion_large');
+                const p_small = document.getElementById('promotion_small');
+                const company_content = document.getElementById('CompanyContent');
+                const learn_content = document.getElementById('learnContent');
+                function myFunction(x){
+                    if (x.matches) {
+                        p_large.style.display = "none";
+                        p_small.style.display = "block";
+                        company_content.innerHTML = "Vast is a company Lorem Ipsum is simply dummy text of the";
+                        learn_content.innerHTML = "Learn"
+                    } else {
+                        p_large.style.display = "block";
+                        p_small.style.display = "none";
+                        company_content.innerHTML = "Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an"
+                        learn_content.innerHTML = "Learn more"
+                    }
+                }
+    
+                const x = window.matchMedia("(max-width: 768px)");
+                myFunction(x)
+                x.addListener(myFunction)
+            }
+        </script>
+ 
 
 </head>
 
@@ -103,10 +127,25 @@
     </div>
 
     <div class="container-fluid">
+            <div class="neon-bg">
+                <p class="float-img1">Neon</p>
+                <p class="float-img2">Light</p>
+                <img class="neon-img4" src="img/neon/neon4.jpg">
+                <img class="neon-img2" src="img/neon/neon3.jpg">
+                <img class="neon-img1" src="img/neon/neon1.jpg">
+                <img class="neon-img3" src="img/neon/neon2.jpg">
+    
+                <p class="neon-para1">Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p class="neon-para2">Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </div>
+    
+
+    <div class="container-fluid">
         <div class="row">
             <h1 class="display_rung">—</h1>
         </div>
-        <div class="row">
+        <div class="row">u
             <h1 class="display_title">Display Units</h1>
         </div>
         <div class="row">
@@ -146,45 +185,8 @@
     </div>
 
 
-    <div class="container-fluid">
-        <div class="neon-bg">
-            <p class="float-img1">Neon</p>
-            <p class="float-img2">Light</p>
-            <img class="neon-img4" src="img/neon/neon4.jpg">
-            <img class="neon-img2" src="img/neon/neon3.jpg">
-            <img class="neon-img1" src="img/neon/neon1.jpg">
-            <img class="neon-img3" src="img/neon/neon2.jpg">
-
-            <p class="neon-para1">Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <p class="neon-para2">Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </div>
-    </div>
-
-    <script>
-        window.onload = () => {
-            const p_large = document.getElementById('promotion_large');
-            const p_small = document.getElementById('promotion_small');
-            const company_content = document.getElementById('CompanyContent');
-            const learn_content = document.getElementById('learnContent');
-            function myFunction(x){
-                if (x.matches) {
-                    p_large.style.display = "none";
-                    p_small.style.display = "block";
-                    company_content.innerHTML = "Vast is a company Lorem Ipsum is simply dummy text of the";
-                    learn_content.innerHTML = "Learn"
-                } else {
-                    p_large.style.display = "block";
-                    p_small.style.display = "none";
-                    company_content.innerHTML = "Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an"
-                    learn_content.innerHTML = "Learn more"
-                }
-            }
-
-            const x = window.matchMedia("(max-width: 768px)");
-            myFunction(x)
-            x.addListener(myFunction)
-        }
-    </script>
+ 
+   
 </body>
 
 </html>

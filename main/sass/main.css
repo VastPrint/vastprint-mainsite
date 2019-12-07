@@ -3,7 +3,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid grey;
 }
 
 *::before, *::after {
@@ -21,13 +20,13 @@
   width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   [class*="col-"] {
     float: left;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .col-1 {
     width: 8.33%;
   }
@@ -97,28 +96,56 @@
 .header {
   position: relative;
   height: 100vh;
-  color: white;
   background-color: white;
-  background-image: url("../img/logo/vast_bg_m.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-@media only screen and (min-width: 600px) {
+.header .header-logo {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
   .header {
-    background-image: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column nowrap;
+            flex-direction: column nowrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    min-height: 120vw;
+    padding-right: 5vw;
+    padding-bottom: 10vw;
+    background-image: url("../img/logo/vast_bg_m.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: right;
+  }
+  .header .header-logo .header-logo-main {
+    font-size: 28vw;
+  }
+  .header .header-logo .header-logo-main .header-logo-main-base {
+    display: none;
+  }
+  .header .header-logo .header-logo-sub {
+    font-size: 8vw;
+    -webkit-transform: translateY(-10vw);
+            transform: translateY(-10vw);
+  }
+  .header .header-text {
+    font-size: 3.5vw;
   }
 }
 
-.header .header-content {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin-bottom: 15vw;
-  text-align: right;
-}
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .header .header-content {
     background-image: url("../img/logo/vast_bg_m.jpg");
     background-size: cover;
@@ -132,12 +159,8 @@
   }
 }
 
-.header .header-content .header-logo-main {
-  font-size: 30vw;
-}
-
-@media only screen and (min-width: 600px) {
-  .header .header-content .header-logo-main {
+@media only screen and (min-width: 768px) {
+  .header .header-logo-main {
     position: absolute;
     font-size: 15vw;
     -webkit-transform: translateY(40vh) translateX(-30vw);
@@ -145,12 +168,8 @@
   }
 }
 
-.header .header-content .header-logo-main .header-logo-main-base {
-  display: none;
-}
-
-@media only screen and (min-width: 600px) {
-  .header .header-content .header-logo-main .header-logo-main-base {
+@media only screen and (min-width: 768px) {
+  .header .header-logo-main .header-logo-main-base {
     position: absolute;
     display: block;
     color: black;
@@ -159,12 +178,8 @@
   }
 }
 
-.header .header-content .header-logo-sub {
-  font-size: 10vw;
-}
-
-@media only screen and (min-width: 600px) {
-  .header .header-content .header-logo-sub {
+@media only screen and (min-width: 768px) {
+  .header .header-logo-sub {
     position: absolute;
     font-size: 3.5vw;
     -webkit-transform: translateY(60vh) translateX(-30vw);
@@ -172,12 +187,12 @@
   }
 }
 
-.header .header-content .header-text1 {
+.header .header-text1 {
   font-size: 3.5vw;
 }
 
-@media only screen and (min-width: 600px) {
-  .header .header-content .header-text1 {
+@media only screen and (min-width: 768px) {
+  .header .header-text1 {
     position: absolute;
     font-size: 1.5vw;
     -webkit-transform: translateY(80vh) translateX(-60vw);
@@ -186,12 +201,12 @@
   }
 }
 
-.header .header-content .header-text2 {
+.header .header-text2 {
   font-size: 3.5vw;
 }
 
-@media only screen and (min-width: 600px) {
-  .header .header-content .header-text2 {
+@media only screen and (min-width: 768px) {
+  .header .header-text2 {
     position: absolute;
     font-size: 1.5vw;
     -webkit-transform: translateY(87vh) translateX(-80vw);

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid grey;
+    // border: 1px solid grey;
 }
 
 *::before,*::after {
@@ -21,13 +21,13 @@
 [class*="col-"] {
     width: 100%;
 
-    @include breakpoint($breakpoint-sm) {
+    @include breakpoint($breakpoint-md) {
         float: left;
 
     }
 }
 
-@include breakpoint($breakpoint-sm) {
+@include breakpoint($breakpoint-md) {
 
     .col-1 {
         width: 8.33%;

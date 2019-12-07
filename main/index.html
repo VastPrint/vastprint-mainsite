@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+    <title>VastPrint</title>
+
+    <!-- bootstrap core css-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="sass/main.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/neon.css">
+    <link rel="stylesheet" href="css/feature_client.css">
+    <link rel="stylesheet" href="css/display_units.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="header row">
+        <div class="header-content">
+
+        </div>
+
+        <div class="header-logo">
+            <div class="col-x header-logo-main">
+                <div class="col-x header-logo-main-up">
+                    VAST</div>
+                <div class="col-x header-logo-main-base">
+                    VAST</div>
+            </div>
+            <div class="col-x header-logo-sub">Greenlane Branch</div>
+        </div>
+
+
+        <div class="col-x header-text">
+            <p class="header-text1">
+                With PASSION,<br>
+                We offer the BEST and<br>
+                AFFORDABLE service in prints<br>
+                and signage, along with a variety<br>
+                of other products.
+            </p>
+            <p class="header-text2">
+                We are Vast Print.
+            </p>
+        </div>
+
+
+
+    </div>
+    <div class="container-carousel" id="promotion_large">
+        <div class="row">
+            <!--控制转到第几张按钮-->
+            <input id="btn1" name="dir" type="radio" />
+            <input id="btn2" name="dir" type="radio" />
+            <input id="btn3" name="dir" type="radio" />
+
+            <!--控制往左边轮播-->
+            <input id="left_btn1" class="dir_btn" name="dir" type="radio" />
+            <input id="left_btn2" class="dir_btn" name="dir" type="radio" />
+            <input id="left_btn3" class="dir_btn" name="dir" type="radio" />
+
+            <!--控制往右边轮播-->
+            <input id="right_btn1" class="dir_btn" name="dir" type="radio" />
+            <input id="right_btn2" class="dir_btn" name="dir" type="radio" />
+            <input id="right_btn3" class="dir_btn" name="dir" type="radio" />
+
+            <!--存放图片-->
+            <div class="pic">
+
+                <!--给所有图片套一个盒子 通过左边距进行轮播-->
+                <div class="box">
+                    <img src="img/promotion/promotion1.jpg">
+                    <img src="img/promotion/promotion2.jpg">
+                    <img src="img/promotion/promotion3.jpg">
+                </div>
+
+                <!--给图片前面加一层图片层 用于实现无缝轮播-->
+                <div class="before_box">
+                    <img src="img/promotion/promotion3.jpg">
+                    <img src="img/promotion/promotion1.jpg">
+                </div>
+
+                <!--给图片后面加一层图片层 用于实现无缝轮播-->
+                <div class="after_box">
+                    <img src="img/promotion/promotion3.jpg">
+                    <img src="img/promotion/promotion1.jpg">
+                </div>
+            </div>
+
+            <!--左边的按钮 每次点击都会根据当前是第几张决定显示的按钮-->
+            <div class="left_box dir_box">
+                <label class="left_btn_1 btn_btn_1" for="left_btn1"></label>
+                <label class="left_btn_2 btn_btn_2" for="left_btn2"></label>
+                <label class="left_btn_3 btn_btn_3" for="left_btn3"></label>
+            </div>
+
+            <!--右边的按钮 每次点击都会根据当前是第几张决定显示的按钮-->
+            <div class="right_box dir_box">
+                <label class="right_btn_1 btn_btn_1" for="right_btn1"></label>
+                <label class="right_btn_2 btn_btn_2" for="right_btn2"></label>
+                <label class="right_btn_3 btn_btn_3" for="right_btn3"></label>
+            </div>
+
+            <!--            下方按钮 点击各个按钮 决定跳转到第几张-->
+            <div class="count">
+                <ul>
+                    <li>
+                        <label class="btn_1" for="btn1"></label>
+                    </li>
+                    <li>
+                        <label class="btn_2" for="btn2"></label>
+                    </li>
+                    <li>
+                        <label class="btn_3" for="btn3"></label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid" id="promotion_small">
+        <img src="img/promotion/promotion1.jpg" width="100%">
+        <img src="img/promotion/promotion2.jpg" width="100%">
+        <img src="img/promotion/promotion3.jpg" width="100%">
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="neon-bg">
+            <p class="float-img1">Neon</p>
+            <p class="float-img2">Light</p>
+            <img class="neon-img4" src="img/neon/neon4.jpg">
+            <img class="neon-img2" src="img/neon/neon3.jpg">
+            <img class="neon-img1" src="img/neon/neon1.jpg">
+            <img class="neon-img3" src="img/neon/neon2.jpg">
+
+            <p class="neon-para1">Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.</p>
+            <p class="neon-para2">Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.</p>
+        </div>
+    </div>
+
+
+
+    <div class="customise row">
+        <div class="col-6 customise-canvas">
+
+            <div class="customise-canvas-head">
+                <h1>Custom Neon Sign</h1>
+            </div>
+            <div class="customise-canvas-body">
+                <div class="customise-canvas-phrase">
+                    <p>ddsdsdsadasddasdsasddasdsasddasdsasdd
+                        asdsasddasdsasddasdsasddasdsasddasdasdsdad
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-6 customise-panel">
+
+            <div class="customise-panel-size">
+                <lable>Neon Size</lable>
+                <div>
+                    <div class="customise-size-btn" id="small-btn">Small</div>
+                    <div class="customise-size-btn" id="medium-btn">Medium</div>
+                    <div class="customise-size-btn" id="large-btn">Large</div>
+                </div>
+            </div>
+            <div class="customise-panel-color">
+                <lable>Neon Color</lable>
+                <div>
+                    <div class="customise-color-btn bg-red" id="red-btn"></div>
+                    <div class="customise-color-btn bg-yellow" id="yellow-btn"> </div>
+                    <div class="customise-color-btn bg-blue" id="blue-btn"> </div>
+                    <div class="customise-color-btn bg-green" id="green-btn"> </div>
+                    <div class="customise-color-btn bg-dark" id="dark-btn"> </div>
+
+
+                </div>
+            </div>
+
+            <div class="customise-panel-font">
+                <lable>Font</lable>
+                <div>
+                    <select id="customise-font-sel">
+                        <option>1</option>
+                        <option>10</option>
+                        <option>10</option>
+                        <option>10</option>
+                        <option>10</option>
+                        <option>10</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="customise-panel-phrase">
+                <lable>Neon phrase</lable>
+                <div>
+                    <textarea rows="4" cols="30" id="customise-phrase-text">
+
+                        </textarea>
+                    <button class="customise-phrase-submit">
+                        try
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="display_rung">—</h1>
+        </div>
+        <div class="row">u
+            <h1 class="display_title">Display Units</h1>
+        </div>
+        <div class="row">
+            <p id="CompanyContent" class="display_content">Vast is a company Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
+                the 1500s, when an</p>
+        </div>
+        <div class="row">
+            <a id="learnContent" class="learn_style" href="http://google.com" target="_blank">Learn more
+            </a>
+        </div>
+        <div class="row">
+            <a class="display_link" href="http://google.com" target="_blank">Here is the link to Vast Print
+            </a>
+        </div>
+        <div class="row">
+            <img src="img/display/display1.jpg" class="img-fluid col-sm-1-5">
+            <img src="img/display/display2.jpg" class="img-fluid col-sm-1-5">
+            <img src="img/display/display3.jpg" class="img-fluid col-sm-1-5">
+            <img src="img/display/display4.jpg" class="img-fluid col-sm-1-5">
+            <img src="img/display/display5.jpg" class="img-fluid col-sm-1-5">
+        </div>
+    </div>
+
+
+    <div class="commercial row">
+        <div class="commercial-text col-x left-0">
+            <h1>__<br>Commercial<br>Singage</h1>
+            <p>Vast is aVast is aVast is aVast is aVast is aVast is aVast is aVast is aVast is aVast is a
+                Vast is aVast is aVast is aVast is aVast is aVast is aVast is aVast is a
+
+            </p>
+            <a href="#">Learn more</a>
+        </div>
+
+        <img src="img/commercial/commercial8.jpg" class="col-x left-1" id="commercial-img_1_1">
+        <img src="img/commercial/commercial5.jpg" class="col-x left-2" id="commercial-img_2_1">
+        <img src="img/commercial/commercial6.jpg" class="col-x left-2" id="commercial-img_2_2">
+        <img src="img/commercial/commercial1.jpg" class="col-x left-2" id="commercial-img_2_3">
+        <img src="img/commercial/commercial2.jpg" class="col-x left-3" id="commercial-img_3_1">
+        <img src="img/commercial/commercial7.jpg" class="col-x left-3" id="commercial-img_3_2">
+        <img src="img/commercial/commercial4.jpg" class="col-x left-3" id="commercial-img_3_3">
+        <img src="img/commercial/commercial3.jpg" class="col-x left-4" id="commercial-img_4_1">
+
+    </div>
+
+
+    <div class="container-fluid">
+        <h1 class="text-center client_rung">—</h1>
+        <h1 class="text-center client_title">Featured Client</h1>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                <img src="img/clients/chattime.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                <img src="img/clients/armstrong.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                <img src="img/clients/fletcher.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+    <div class="contact row">
+        <div class="col-6 ">
+            <p class="contact-head">Talk to us</p>
+            <div class="contact-text">
+                <div>396 Great South Rd, <br>
+                    Auckland, NZ</div>
+                <div>
+                    0210 888 8888 <br>
+                    greenlane@vastprint.co.nz
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <p class="contact-head"> Follow</p>
+            <div class="contact-text">
+                <div class="contact-wechat">
+                    <img src="img/icon/wechat.png">
+                    <p>Vast Print Ltd</p>
+
+                </div>
+                <div class="contact-facebook">
+                    <img src="img/icon/facebook.png">
+                    <p>Sign Vastprint
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer row">
+        <div class="col-4 ">
+
+
+            <p class="footer-head">Contact us</p>
+
+            <div class="footer-text">
+                Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the
+            </div>
+
+        </div>
+        <div class="col-4 ">
+
+
+            <p class="footer-head">Opening hour</p>
+
+
+            <div class="footer-text">
+                Vast is a company Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the
+            </div>
+
+        </div>
+        <div class="col-4 ">
+
+            <p class="footer-head">Get social with us</p>
+
+            <div class="footer-text">
+                <img src="img/icon/wechat.png">
+                <img src="img/icon/facebook.png">
+            </div>
+
+        </div>
+        <p class="col-12 text-center text-muted ">
+            <small>© Vast ­ 2019</small>
+        </p>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
