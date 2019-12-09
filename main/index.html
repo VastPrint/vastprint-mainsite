@@ -13,16 +13,13 @@
     <!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
 
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="sass/main.css" type="text/css">
-
-
+    <!-- <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/neon.css">
     <link rel="stylesheet" href="css/feature_client.css">
-    <link rel="stylesheet" href="css/display_units.css">
+    <link rel="stylesheet" href="css/display_units.css"> -->
 
-
+    <link rel="stylesheet" href="sass/main.css" type="text/css">
 
 
 </head>
@@ -165,8 +162,8 @@
             </div>
             <div class="customise-canvas-body">
                 <div class="customise-canvas-phrase">
-                    <p>ddsdsdsadasddasdsasddasdsasddasdsasdd
-                        asdsasddasdsasddasdsasddasdsasddasdasdsdad
+                    <p>
+                        Sample
                     </p>
                 </div>
             </div>
@@ -178,36 +175,37 @@
             <div class="customise-panel-size">
                 <lable>Neon Size</lable>
                 <div>
-                    <div class="customise-size-btn" id="small-btn">Small</div>
-                    <div class="customise-size-btn" id="medium-btn">Medium</div>
-                    <div class="customise-size-btn" id="large-btn">Large</div>
+
+                    <input type="radio" name="size" id="small" value="small" checked="checked">
+                    <label for="small" class="customise-size-btn" >Small</label>
+                    
+                    <input type="radio" name="size" id="medium" value="medium">
+                    <label for="medium" class="customise-size-btn">Medium</label>
+
+                    <input type="radio" name="size" id="large" value="large">
+                    <label for="large" class="customise-size-btn">Large</label>
                 </div>
             </div>
 
             <div class="customise-panel-phrase">
-                <lable>Neon phrase</lable>
+                <lable for="customise-phrase-text">Neon phrase</lable>
                 <div>
-                    <textarea rows="4" cols="30" id="customise-phrase-text">
-
-                        </textarea>
+                    <textarea id="customise-phrase-text"></textarea>
                     <button class="customise-phrase-submit">
                         try
                     </button>
                 </div>
             </div>
 
-      
+
 
             <div class="customise-panel-font">
-                <lable>Font</lable>
+                <lable for="customise-font-sel">Font</lable>
                 <div>
                     <select id="customise-font-sel">
-                        <option>1</option>
-                        <option>10</option>
-                        <option>10</option>
-                        <option>10</option>
-                        <option>10</option>
-                        <option>10</option>
+                        <option value="">Font 1</option>
+                        <option value="">Font 2</option>
+                        <option value="">Font 3</option>
                     </select>
                 </div>
 
@@ -216,21 +214,35 @@
 
             <div class="customise-panel-color">
                 <lable></lable>
-                <div>
-                    <div class="customise-color-btn bg-red" id="red-btn"></div>
-                    <div class="customise-color-btn bg-yellow" id="yellow-btn"> </div>
-                    <div class="customise-color-btn bg-blue" id="blue-btn"> </div>
-                    <div class="customise-color-btn bg-green" id="green-btn"> </div>
-                    <div class="customise-color-btn bg-dark" id="dark-btn"> </div>
 
+                <div>
+
+                    <input type="radio" id="red" name="color" value="red" checked="checked"></input>
+                    <label for="red" class="customise-color-btn bg-red"></label>
+                    
+                    <input type="radio" id="yellow" name="color" value="yellow"></input>
+                    <label for="yellow" class="customise-color-btn bg-yellow"></label>
+                    
+                    <input type="radio" id="blue" name="color" value="blue"></input>
+                    <label for="blue" class="customise-color-btn bg-blue"></label>
+
+                    <input type="radio" id="green" name="color" value="green"></input>
+                    <label for="green" class="customise-color-btn bg-green"></label>
+
+                    <input type="radio" id="dark" name="color" value="dark"></input>
+                    <label for="dark" class="customise-color-btn bg-dark"></label>
 
                 </div>
+
+
+
             </div>
-
-            
-
-
         </div>
+
+
+
+
+    </div>
 
     </div>
 

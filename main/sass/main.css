@@ -355,14 +355,22 @@
   }
 }
 
-.customise .customise-panel .customise-size-btn {
+.customise .customise-panel .customise-panel-size input[type="radio"] {
+  display: none;
+}
+
+.customise .customise-panel .customise-panel-size input[type="radio"]:checked + label {
+  border: solid 2px #5ee0f1;
+}
+
+.customise .customise-panel .customise-panel-size .customise-size-btn {
   display: inline-block;
   color: white;
   text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) {
-  .customise .customise-panel .customise-size-btn {
+  .customise .customise-panel .customise-panel-size .customise-size-btn {
     border: 0.5px rgba(255, 255, 255, 0.7) solid;
     border-radius: 5px;
     margin-right: 1vw;
@@ -372,7 +380,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .customise .customise-panel .customise-size-btn {
+  .customise .customise-panel .customise-panel-size .customise-size-btn {
     border: 1px white solid;
     border-radius: 10px;
     margin-right: 5vw;
@@ -381,7 +389,7 @@
   }
 }
 
-.customise .customise-panel .customise-size-btn:hover {
+.customise .customise-panel .customise-panel-size .customise-size-btn:hover {
   cursor: pointer;
 }
 
@@ -460,14 +468,24 @@
   }
 }
 
-.customise .customise-panel .customise-color-btn {
+.customise .customise-panel .customise-panel-color input[type="radio"] {
+  display: none;
+}
+
+.customise .customise-panel .customise-panel-color input[type="radio"]:checked + label {
+  border: solid 2px #5ee0f1;
+}
+
+.customise .customise-panel .customise-panel-color .customise-color-btn {
   display: inline-block;
   color: white;
   text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media only screen and (min-width: 768px) {
-  .customise .customise-panel .customise-color-btn {
+  .customise .customise-panel .customise-panel-color .customise-color-btn {
     border: 0.5px rgba(255, 255, 255, 0.7) solid;
     border-radius: 5px;
     height: 3vw;
@@ -477,17 +495,13 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .customise .customise-panel .customise-color-btn {
+  .customise .customise-panel .customise-panel-color .customise-color-btn {
     border: 1px white solid;
     border-radius: 5px;
     height: 7vw;
     width: 7vw;
     margin-right: 3vw;
   }
-}
-
-.customise .customise-panel .customise-color-btn:hover {
-  cursor: pointer;
 }
 
 .commercial {

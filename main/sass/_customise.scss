@@ -116,31 +116,43 @@
         }
 
 
-        .customise-size-btn {
-            display: inline-block;
-            color: white;
-            text-decoration: none;
-
-            @media only screen and (min-width:768px) {
-                border: 0.5px rgba(255, 255, 255, .7) solid;
-                border-radius: 5px;
-                margin-right: 1vw;
-                padding: 3px 15px;
-                font-size: 1.5vw;
+        .customise-panel-size {
+            input[type="radio"] {
+                display: none;
             }
 
-            @media only screen and (max-width:768px) {
-                border: 1px rgba(255, 255, 255, 1) solid;
-                border-radius: 10px;
-                margin-right: 5vw;
-                padding: 3px 15px;
-                font-size: 5vw;
+            input[type="radio"]:checked+label {
+                border: solid 2px rgb(94, 224, 241);
+
             }
+            
+            .customise-size-btn {
+                display: inline-block;
+                color: white;
+                text-decoration: none;
+
+                @media only screen and (min-width:768px) {
+                    border: 0.5px rgba(255, 255, 255, .7) solid;
+                    border-radius: 5px;
+                    margin-right: 1vw;
+                    padding: 3px 15px;
+                    font-size: 1.5vw;
+                }
+
+                @media only screen and (max-width:768px) {
+                    border: 1px rgba(255, 255, 255, 1) solid;
+                    border-radius: 10px;
+                    margin-right: 5vw;
+                    padding: 3px 15px;
+                    font-size: 5vw;
+                }
 
 
-            &:hover {
-                cursor: pointer;
+                &:hover {
+                    cursor: pointer;
+                }
             }
+
         }
 
 
@@ -213,35 +225,48 @@
             }
         }
 
-        .customise-color-btn {
-            display: inline-block;
-            color: white;
-            text-decoration: none;
-
-
-            @media only screen and (min-width:768px) {
-                border: 0.5px rgba(255, 255, 255, .7) solid;
-                border-radius: 5px;
-                height: 3vw;
-                width: 3vw;
-                margin-right: 10px;
+        .customise-panel-color {
+            input[type="radio"] {
+                display: none;
             }
 
-            @media only screen and (max-width:768px) {
-                border: 1px rgba(255, 255, 255, 1) solid;
-                border-radius: 5px;
-                height: 7vw;
-                width: 7vw;
-                margin-right: 3vw;
-
+            input[type="radio"]:checked+label {
+                border: solid 2px rgb(94, 224, 241);
             }
 
-            &:hover {
-                cursor: pointer;
+            .customise-color-btn {
+                display: inline-block;
+                color: white;
+                text-decoration: none;
+                transition: all 0.3s;
+
+
+                @media only screen and (min-width:768px) {
+                    border: 0.5px rgba(255, 255, 255, .7) solid;
+                    border-radius: 5px;
+                    height: 3vw;
+                    width: 3vw;
+                    margin-right: 10px;
+                }
+
+                @media only screen and (max-width:768px) {
+                    border: 1px rgba(255, 255, 255, 1) solid;
+                    border-radius: 5px;
+                    height: 7vw;
+                    width: 7vw;
+                    margin-right: 3vw;
+
+                }
+
+                // &:hover {
+                //     cursor: pointer;
+                // }
+
+
             }
         }
-
-
     }
+
+
 
 }
