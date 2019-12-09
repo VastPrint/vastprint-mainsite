@@ -1,8 +1,11 @@
+.neon-p-bg {
+    color: black;
+}
 @media screen and (max-width: 768px){
     .neon-bg{
         /*position: relative;*/
         /*height:700vw;*/
-        background-color: #000000;
+        background-color: black;
     }
     .neon-img1{
         /*position: absolute;*/
@@ -11,6 +14,7 @@
         /*left:25vw;*/
         /*top:6vw;*/
         /*background: #444c5b;*/
+        margin-bottom: 15vw;
         z-index: 1;
     }
     .neon-img2{
@@ -19,6 +23,7 @@
         /*height: 17vh;*/
         right:4vw;
         top:14vw;
+        margin-bottom: 15vw;
     }
     .neon-img3{
         /*position: absolute;*/
@@ -34,6 +39,7 @@
         right:18vw;
         top:38vw;
         z-index: 1;
+        margin-bottom: 15vw;
     }
     .float-img1{
         /*position: absolute;*/
@@ -64,6 +70,7 @@
         /*position: absolute;*/
         width:85%;
         padding-left: 10%;
+        padding-top: 10vw;
         /*height: 20vh;*/
         left:25vw;
         top:33vw;
@@ -75,9 +82,11 @@
         /*position: absolute;*/
         width:85%;
         padding-left: 10%;
+        /*margin-bottom: 20vw;*/
         /*height: 20vh;*/
-        right:11vw;
-        top:29vw;
+        padding-right:11vw;
+        padding-top:15vw;
+        padding-bottom: 10vw;
         font-size: 4vw;
         color: white;
         z-index: 1;

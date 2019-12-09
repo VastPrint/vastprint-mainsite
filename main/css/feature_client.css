@@ -20,12 +20,25 @@
     .client_title{
         margin-bottom: 10vw;;
         width:100%;
-        padding-left: 10%;
-        /*height: 20vh;*/
-        font-size: 10vw;
+        height: auto;
+        font-size: 11vw;
         font-weight:800;
         font-family: 'Maven Pro', sans-serif;;
         color: black;
+    }
+
+    .client_img1{
+        width: 80vw;
+    }
+    .client_img2{
+        width: 70vw;
+    }
+    .client_img3{
+        width: 65vw;
+    }
+
+    .client_bottom_blank{
+        margin-bottom: 17vh;
     }
 }
 @media screen and (min-width: 768px){
@@ -45,7 +58,7 @@
     }
 
     .client_title{
-        margin-bottom: 10vw;;
+        margin-bottom: 5vw;;
         width:85%;
         padding-left: 10%;
         /*height: 20vh;*/
@@ -53,6 +66,20 @@
         font-weight:800;
         font-family: 'Maven Pro', sans-serif;;
         color: black;
+    }
+
+    .client_img1 {
+        height: 15vh;
+    }
+    .client_img2 {
+        height: 15vh;
+    }
+    .client_img3{
+        height: 15vh;
+    }
+
+    .client_bottom_blank{
+        margin-bottom: 13vh;
     }
 }
 
