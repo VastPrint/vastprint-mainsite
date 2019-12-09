@@ -12,8 +12,8 @@
     <!-- <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"> -->
     <!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
 
-
-    <!-- <link rel="stylesheet" href="css/style.css">
+<!-- 
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/neon.css">
     <link rel="stylesheet" href="css/feature_client.css">
@@ -21,7 +21,47 @@
 
     <link rel="stylesheet" href="sass/main.css" type="text/css">
 
+    <script>
+        window.onload = () => {
+            const neonSizeRadio = document.getElementsByName("size");
+            const neonTextPhrase= document.getElementById('customise-phrase-text');
+            const neonFontSel= document.getElementById("customise-font-sel");
+            const neonColorRadio = document.getElementsByName("color");
+  
+            const neonSignShowcase = document.getElementById('neonSignShowcase');
+           
+            const neonSubmitBtn = document.getElementById('try-btn');
+            neonSubmitBtn.onclick = () => 
+            {
+                alert(neonSignShowcase.innerText);
 
+                let size,text,font,color;
+
+                for (let i = 0; i < neonSizeRadio.length; i++) {
+                    if (neonSizeRadio[i].checked) {
+                        size=neonSizeRadio[i].value;
+                    }
+                }
+
+                text=neonTextPhrase.value;
+                font=neonFontSel[neonFontSel.selectedIndex].value;
+                for (let i = 0; i < neonColorRadio.length; i++) {
+                    if (neonColorRadio[i].checked) {
+                        color=neonColorRadio[i].value;
+                    }
+                }
+
+                neonSignShowcase.style.fontSize=size;
+                neonSignShowcase.style.fontFamily=font;
+                neonSignShowcase.style.color=color;
+                neonSignShowcase.innerText=text;
+
+
+
+              
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -161,8 +201,8 @@
                 <h1>Custom Neon Sign</h1>
             </div>
             <div class="customise-canvas-body">
-                <div class="customise-canvas-phrase">
-                    <p>
+                <div class="customise-canvas-phrase" >
+                    <p id="neonSignShowcase">
                         Sample
                     </p>
                 </div>
@@ -176,13 +216,13 @@
                 <lable>Neon Size</lable>
                 <div>
 
-                    <input type="radio" name="size" id="small" value="small" checked="checked">
-                    <label for="small" class="customise-size-btn" >Small</label>
-                    
-                    <input type="radio" name="size" id="medium" value="medium">
+                    <input type="radio" name="size" id="small" value="5vw" checked="checked">
+                    <label for="small" class="customise-size-btn">Small</label>
+
+                    <input type="radio" name="size" id="medium" value="10vw">
                     <label for="medium" class="customise-size-btn">Medium</label>
 
-                    <input type="radio" name="size" id="large" value="large">
+                    <input type="radio" name="size" id="large" value="20vw">
                     <label for="large" class="customise-size-btn">Large</label>
                 </div>
             </div>
@@ -191,7 +231,7 @@
                 <lable for="customise-phrase-text">Neon phrase</lable>
                 <div>
                     <textarea id="customise-phrase-text"></textarea>
-                    <button class="customise-phrase-submit">
+                    <button class="customise-phrase-submit" id="try-btn">
                         try
                     </button>
                 </div>
@@ -203,9 +243,8 @@
                 <lable for="customise-font-sel">Font</lable>
                 <div>
                     <select id="customise-font-sel">
-                        <option value="">Font 1</option>
-                        <option value="">Font 2</option>
-                        <option value="">Font 3</option>
+                        <option value='"Times New Roman", Times, serif'>"Times New Roman", Times, serif</option>
+                        <option value='Arial, Helvetica, sans-serif;'>Arial, Helvetica, sans-serif;</option>
                     </select>
                 </div>
 
@@ -219,10 +258,10 @@
 
                     <input type="radio" id="red" name="color" value="red" checked="checked"></input>
                     <label for="red" class="customise-color-btn bg-red"></label>
-                    
+
                     <input type="radio" id="yellow" name="color" value="yellow"></input>
                     <label for="yellow" class="customise-color-btn bg-yellow"></label>
-                    
+
                     <input type="radio" id="blue" name="color" value="blue"></input>
                     <label for="blue" class="customise-color-btn bg-blue"></label>
 
