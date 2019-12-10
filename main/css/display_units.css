@@ -17,13 +17,16 @@
     #LearnContent2{
         display:block;
     }
+    #vv-txt{
+        display: none;
+    }
 
     .unit_bg{
         height:320vw;
         background-color: white;
     }
 
-    .col-sm-1-5{
+    .dp-1-5{
         width: 100%;
         float:left;
     }
@@ -91,16 +94,15 @@
     #LearnContent2{
         display:none;
     }
+    #vv-txt{
+        display: block;
+    }
 
     .unit_bg {
         height: 25vw;
         background-color: white;
     }
 
-    .col-sm-1-5 {
-        width: 20%;
-        float: left;
-    }
 
     .display_rung {
         padding-left: 20%;
@@ -142,5 +144,25 @@
     .link-box {
         margin-bottom: 4vh;
         text-align: right;
+    }
+
+    .ver-txt {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-size: 1vw;
+        color: #737373;
+        float: left;
+        margin-left: 2%;
+        margin-right: 10%;
+        margin-top:3%;
+    }
+    .dp-1-5 {
+        width: 17%;
+        float: left;
+    }
+
+    .pics_box {
+        padding-right: 2%;
+        margin-bottom: 22vh;
     }
 }
