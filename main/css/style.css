@@ -1,7 +1,3 @@
-*{
-	margin: 0;
-	padding: 0;
-}
 html,body{
 	/*display: flex;*/
 	/*align-items:center;*/
@@ -18,3 +14,9 @@ html,body{
 	margin-right: auto;
 	margin-left: auto;
 }
+
+.box-top {
+	margin-top: 4vh;
+}
+
+

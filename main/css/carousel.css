@@ -8,15 +8,15 @@
 }
 
 @media screen and (min-width: 768px){
-   #promotion_large{
-    display:block
+    #promotion_large{
+		display:block
     }
     #promotion_small{
-        display: none;
+		display: none;
     }
 }
 
-input[type=radio]{
+input[type=radio][name="dir"]{
 	display: none;
 }
 li{
@@ -26,7 +26,7 @@ li{
 	position: relative;
 	/*width:60%;*/
 	/*height:55%;*/
-	background: white;
+	background: black;
 	overflow: hidden;
 }
 .pic{
@@ -148,11 +148,11 @@ li{
 
 
 /* 每次点击按钮 重置当前焦点按钮的样式 */
-input[type=radio]:checked ~ .count label{
+input[type=radio][name="dir"]:checked ~ .count label{
     background: #989898;
 }
 /* 重置当前显示的左右按钮 */
-input[type=radio]:checked ~ .dir_box label{
+input[type=radio][name="dir"]:checked ~ .dir_box label{
     display: none;
 }
 
