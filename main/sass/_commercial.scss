@@ -2,6 +2,8 @@
 
     background-color: black;
     position: relative;
+    font-family: 'Roboto', sans-serif;
+
 
     @include breakpoint($breakpoint-sm) {
         height: 80vw;

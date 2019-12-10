@@ -1,22 +1,9 @@
-html,body{
-	/*display: flex;*/
-	/*align-items:center;*/
-	/*justify-content:center;*/
-	margin-right: auto;
-	margin-left: auto;
-	width: 100%;
-	/*overflow: hidden;*/
-}
+
 .container-fluid {
-	width: 100%;
-	padding-right: 0px;
+	width: 100%; 
+	 padding-right: 0px;
 	padding-left: 0px;
 	margin-right: auto;
 	margin-left: auto;
 }
-
-.box-top {
-	margin-top: 4vh;
-}
-
 
