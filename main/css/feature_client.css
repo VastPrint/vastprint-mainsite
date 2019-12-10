@@ -69,13 +69,16 @@
     }
 
     .client_img1 {
-        height: 15vh;
+        width:27vw;
+        height: auto;
     }
     .client_img2 {
-        height: 15vh;
+        width:23vw;
+        height: auto;
     }
     .client_img3{
-        height: 15vh;
+        width:28vw;
+        height: auto;
     }
 
     .client_bottom_blank{
