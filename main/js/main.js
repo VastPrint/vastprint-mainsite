@@ -8,7 +8,7 @@ window.onload = () => {
 
     const neonSubmitBtn = document.getElementById('try-btn');
     neonSubmitBtn.onclick = () => {
-    
+
         let size, text, font, color;
 
         for (let i = 0; i < neonSizeRadio.length; i++) {
@@ -25,15 +25,41 @@ window.onload = () => {
             }
         }
 
-        let tmpClassName=`text-neon-${color} text-neon-${size} `
+        let tmpClassName = `text-neon-${color} text-neon-${size} `
         alert(tmpClassName);
-// 
+        // 
 
         neonSignShowcase.style.fontFamily = font;
-        neonSignShowcase.setAttribute('class',tmpClassName);
+        neonSignShowcase.setAttribute('class', tmpClassName);
 
-        
+
         neonSignShowcase.innerText = text;
 
+
     }
+
+
+    const naviCheckBox = document.getElementById('navi-toggle');
+    function myFunction(x) {
+        if (x.matches) {
+            naviCheckBox.checked = false;
+            // console.log(naviCheckBox.checked)
+        } else {
+            naviCheckBox.checked = false;
+            // console.log(naviCheckBox.checked)
+        }
+    }
+    const x = window.matchMedia("(max-width: 768px)");
+    myFunction(x)
+    x.addListener(myFunction);
+
+    const naviItems=document.getElementsByClassName("navi-item");
+    for(let i=0;i<naviItems.length;i++){
+        naviItems[i].onclick= ()=>{
+            naviCheckBox.checked=false;
+        }
+    }
+
+
+
 }

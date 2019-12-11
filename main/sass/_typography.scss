@@ -28,7 +28,7 @@
 }
 .text-neon-red{
     @extend .text-neon-base;
-    color: #FF1177;
+    // color: #FF1177;
     -webkit-animation: neon-red 1.5s ease-in-out infinite alternate;
     -moz-animation: neon-red 1.5s ease-in-out infinite alternate;
     animation: neon-red 1.5s ease-in-out infinite alternate;
