@@ -8,8 +8,7 @@ window.onload = () => {
 
     const neonSubmitBtn = document.getElementById('try-btn');
     neonSubmitBtn.onclick = () => {
-        alert(neonSignShowcase.innerText);
-
+    
         let size, text, font, color;
 
         for (let i = 0; i < neonSizeRadio.length; i++) {
@@ -26,9 +25,15 @@ window.onload = () => {
             }
         }
 
-        neonSignShowcase.style.fontSize = size;
+        let tmpClassName=`text-neon-${color} text-neon-${size} `
+        alert(tmpClassName);
+// 
+
         neonSignShowcase.style.fontFamily = font;
-        neonSignShowcase.style.color = color;
+        neonSignShowcase.setAttribute('class',tmpClassName);
+
+        
         neonSignShowcase.innerText = text;
+
     }
 }
