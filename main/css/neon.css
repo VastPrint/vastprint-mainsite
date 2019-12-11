@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Foco_Blk;
+    src:url("../fonts/Foco_Blk.ttf");
+}
+
 .neon-p-bg {
     color: black;
 }
@@ -43,10 +48,10 @@
     }
     .float-img1{
         /*position: absolute;*/
-        /*left:15vw;*/
-        top:30vw;
-        font-size: 25vw;
-        font-family: Monospaced;
+        padding-top: 40%;
+        padding-left: 3%;
+        font-size: 28vw;
+        font-family: Foco_Blk;
         font-weight: bolder;
         letter-spacing: 0.02em;
         -webkit-text-stroke:8px #76f2f1;
@@ -55,10 +60,10 @@
     }
     .float-img2{
         /*position: absolute;*/
-        right:20vw;
-        top:35vw;
         padding-left: 20%;
-        font-size: 25vw;
+        padding-bottom: 10%;
+        font-family: Foco_Blk;
+        font-size: 28vw;
         font-weight: bolder;
         letter-spacing: 0.02em;
         -webkit-text-stroke:8px #65c8ee;
@@ -70,10 +75,8 @@
         /*position: absolute;*/
         width:85%;
         padding-left: 10%;
-        padding-top: 10vw;
+        padding-top: 10vh;
         /*height: 20vh;*/
-        left:25vw;
-        top:33vw;
         font-size: 4vw;
         color: white;
         z-index: 1;
@@ -84,9 +87,9 @@
         padding-left: 10%;
         /*margin-bottom: 20vw;*/
         /*height: 20vh;*/
-        padding-right:11vw;
-        padding-top:15vw;
-        padding-bottom: 10vw;
+        /*padding-right:11vw;*/
+        padding-top:15vh;
+        padding-bottom: 15vh;
         font-size: 4vw;
         color: white;
         z-index: 1;
@@ -137,7 +140,7 @@
         left:15vw;
         top:15vw;
         font-size: 11vw;
-        font-family: Monospaced;
+        font-family: Foco_Blk;
         font-weight: bolder;
         letter-spacing: 0.02em;
         -webkit-text-stroke:8px #76f2f1;
@@ -147,7 +150,8 @@
     .float-img2{
         position: absolute;
         right:20vw;
-        top:35vw;
+        top:38vw;
+        font-family: Foco_Blk;
         font-size: 12vw;
         font-weight: bolder;
         letter-spacing: 0.02em;
