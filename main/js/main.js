@@ -26,8 +26,7 @@ window.onload = () => {
         }
 
         let tmpClassName = `text-neon-${color} text-neon-${size} `
-        alert(tmpClassName);
-        // 
+ 
 
         neonSignShowcase.style.fontFamily = font;
         neonSignShowcase.setAttribute('class', tmpClassName);
@@ -43,15 +42,15 @@ window.onload = () => {
     function myFunction(x) {
         if (x.matches) {
             naviCheckBox.checked = false;
-            // console.log(naviCheckBox.checked)
         } else {
             naviCheckBox.checked = false;
-            // console.log(naviCheckBox.checked)
         }
     }
     const x = window.matchMedia("(max-width: 768px)");
     myFunction(x)
     x.addListener(myFunction);
+
+
 
     const naviItems=document.getElementsByClassName("navi-item");
     for(let i=0;i<naviItems.length;i++){
