@@ -62,6 +62,16 @@
             }
         }
 
+        .commercial-text-vertical{
+            display: none;
+            color:gray;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg) translateX(2vw)  translatey(-3vw);
+            @include breakpoint($breakpoint-sm) {
+                display: block;
+            }
+        }
+
     }
 
     @include breakpoint($breakpoint-sm) {

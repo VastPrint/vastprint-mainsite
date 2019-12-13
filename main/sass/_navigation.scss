@@ -10,7 +10,7 @@
     .navi-logo {
 
         float: left;
-
+ 
         img {
             content: url("../img/logo/logo_all_black.png");
 
@@ -68,7 +68,18 @@
                 margin-right: 4vw;
 
             }
+
+            .navi-item{
+                transition: border .3s ease;
+            }
+            .navi-item:hover{
+                
+                border-bottom:2px white solid;
+            }
+
+          
         }
+  
     }
 
 
@@ -158,7 +169,10 @@
                         font-weight: 300;
                         color: white;
                         text-decoration: none;
+
+
                     }
+                    
                 }
             }
 
