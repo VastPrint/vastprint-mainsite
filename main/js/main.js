@@ -1,3 +1,15 @@
+const smoothScroll= ()=>{
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+
 window.onload = () => {
     const neonSizeRadio = document.getElementsByName("size");
     const neonTextPhrase = document.getElementById('customise-phrase-text');
@@ -61,4 +73,9 @@ window.onload = () => {
 
 
 
+
+    
+
+
+    smoothScroll();
 }
