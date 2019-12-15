@@ -352,6 +352,21 @@
   }
 }
 
+.navigation .navi-backtop {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 2s ease-in;
+  transition: opacity 2s ease-in;
+  z-index: 1000;
+  background-image: url("../img/icon/back-top.png");
+  background-size: contain;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  border-radius: 5px;
+}
+
 .navigation .navi-checkbox {
   display: none;
 }
@@ -383,6 +398,12 @@
   .navigation ul[class="navi-list"] li a {
     text-decoration: none;
     color: white;
+  }
+  .navigation .navi-backtop {
+    bottom: 5vh;
+    right: 5vw;
+    height: 3.5vw;
+    width: 3.5vw;
   }
 }
 
@@ -454,6 +475,12 @@
     font-weight: 300;
     color: white;
     text-decoration: none;
+  }
+  .navigation .navi-backtop {
+    bottom: 4vh;
+    right: 7vw;
+    height: 7vw;
+    width: 7vw;
   }
 }
 

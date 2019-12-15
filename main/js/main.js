@@ -1,14 +1,31 @@
-const smoothScroll= ()=>{
+const smoothScroll = () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-    
+
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
         });
     });
 }
+
+
+
+const showBackTopButton = () => {
+    var btnBackTop = document.getElementById("id-backtop");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btnBackTop.style.visibility = "visible";
+        btnBackTop.style.opacity = 0.8;
+     
+    } else {
+        btnBackTop.style.visibility = "hidden";
+        btnBackTop.style.opacity = 0;
+
+    }
+}
+
+
 
 window.onload = () => {
     const neonSizeRadio = document.getElementsByName("size");
@@ -38,7 +55,7 @@ window.onload = () => {
         }
 
         let tmpClassName = `text-neon-${color} text-neon-${size} `
- 
+
 
         neonSignShowcase.style.fontFamily = font;
         neonSignShowcase.setAttribute('class', tmpClassName);
@@ -64,18 +81,22 @@ window.onload = () => {
 
 
 
-    const naviItems=document.getElementsByClassName("navi-item");
-    for(let i=0;i<naviItems.length;i++){
-        naviItems[i].onclick= ()=>{
-            naviCheckBox.checked=false;
+    const naviItems = document.getElementsByClassName("navi-item");
+    for (let i = 0; i < naviItems.length; i++) {
+        naviItems[i].onclick = () => {
+            naviCheckBox.checked = false;
         }
     }
 
 
 
 
+
+
     
-
-
     smoothScroll();
 }
+window.onscroll = function() {
+    showBackTopButton();
+
+};

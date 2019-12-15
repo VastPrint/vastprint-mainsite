@@ -39,6 +39,27 @@
         }
     }
 
+    .navi-backtop{
+        position: fixed;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: opacity 2s ease-in;
+        -moz-transition: opacity 2s ease-in;
+        -o-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+        transition: opacity 2s ease-in;
+   
+        z-index:1000;
+        background-image: url("../img/icon/back-top.png");
+        background-size:contain;
+        background-color:rgba($color:white,$alpha:.3);
+        filter: invert(100%);
+        border-radius: 5px;
+
+
+      
+
+    }
     .navi-checkbox {
         display: none;
     }
@@ -50,6 +71,7 @@
         
         border-bottom:2px white solid;
     }
+
 
     @media only screen and (min-width:768px) {
         .navi-button {
@@ -80,6 +102,13 @@
           
 
           
+        }
+
+        .navi-backtop{
+            bottom:5vh;
+            right:5vw;
+            height:3.5vw;
+            width:3.5vw;
         }
   
     }
@@ -179,6 +208,15 @@
                 }
             }
 
+        }
+
+        .navi-backtop{
+       
+            // background-color: transparent;
+            bottom:4vh;
+            right:7vw;
+            height:7vw;
+            width:7vw;
         }
     }
 
