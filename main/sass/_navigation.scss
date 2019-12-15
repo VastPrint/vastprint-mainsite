@@ -1,16 +1,16 @@
 .navigation {
     // position: -webkit-sticky;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 
-    
     z-index: 1000;
 
     .navi-logo {
 
         float: left;
-
+ 
         img {
             content: url("../img/logo/logo_all_black.png");
 
@@ -39,9 +39,39 @@
         }
     }
 
+    .navi-backtop{
+        position: fixed;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: opacity 2s ease-in;
+        -moz-transition: opacity 2s ease-in;
+        -o-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+        transition: opacity 2s ease-in;
+   
+        z-index:1000;
+        background-image: url("../img/icon/back-top.png");
+        background-size:contain;
+        background-color:rgba($color:white,$alpha:.3);
+        filter: invert(100%);
+        border-radius: 5px;
+
+
+      
+
+    }
     .navi-checkbox {
         display: none;
     }
+
+    .navi-link{
+        transition: border .3s ease;
+    }
+    .navi-link:hover,.navi-link:hover:active{
+        
+        border-bottom:2px white solid;
+    }
+
 
     @media only screen and (min-width:768px) {
         .navi-button {
@@ -68,7 +98,19 @@
                 margin-right: 4vw;
 
             }
+
+          
+
+          
         }
+
+        .navi-backtop{
+            bottom:5vh;
+            right:5vw;
+            height:3.5vw;
+            width:3.5vw;
+        }
+  
     }
 
 
@@ -130,14 +172,14 @@
             position: fixed;
             top: 0;
             right: 0;
-            background: red;
+            background: rgba(0,0,0,.8);
 
             z-index: 1500;
 
             opacity: 0;
             width: 0;
 
-            transition: width .8s cubic-bezier(0, .9, .8, 1.03);
+            transition: width .3s cubic-bezier(0, .9, .8, 1.03);
 
             .navi-list {
                 position: absolute;
@@ -146,20 +188,35 @@
                 transform: translate(-50%, -50%);
                 list-style: none;
                 text-align: center;
+                width:100%;
 
 
                 .navi-item {
-                    margin: 1rem;
+                    margin: 1.5rem;
+                    
+                    
 
                     .navi-link {
                         font-size: 3rem;
                         font-weight: 300;
-                        color: black;
+                        color: white;
                         text-decoration: none;
+
+
                     }
+                    
                 }
             }
 
+        }
+
+        .navi-backtop{
+       
+            // background-color: transparent;
+            bottom:4vh;
+            right:7vw;
+            height:7vw;
+            width:7vw;
         }
     }
 

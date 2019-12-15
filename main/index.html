@@ -14,52 +14,14 @@
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/neon.css">
     <link rel="stylesheet" href="css/feature_client.css">
-    <link rel="stylesheet" href="css/display_units.css"> 
+    <link rel="stylesheet" href="css/display_units.css">
 
-
-
-    <script>
-        window.onload = () => {
-            const neonSizeRadio = document.getElementsByName("size");
-            const neonTextPhrase = document.getElementById('customise-phrase-text');
-            const neonFontSel = document.getElementById("customise-font-sel");
-            const neonColorRadio = document.getElementsByName("color");
-
-            const neonSignShowcase = document.getElementById('neonSignShowcase');
-
-            const neonSubmitBtn = document.getElementById('try-btn');
-            neonSubmitBtn.onclick = () => {
-                alert(neonSignShowcase.innerText);
-
-                let size, text, font, color;
-
-                for (let i = 0; i < neonSizeRadio.length; i++) {
-                    if (neonSizeRadio[i].checked) {
-                        size = neonSizeRadio[i].value;
-                    }
-                }
-
-                text = neonTextPhrase.value;
-                font = neonFontSel[neonFontSel.selectedIndex].value;
-                for (let i = 0; i < neonColorRadio.length; i++) {
-                    if (neonColorRadio[i].checked) {
-                        color = neonColorRadio[i].value;
-                    }
-                }
-
-                neonSignShowcase.style.fontSize = size;
-                neonSignShowcase.style.fontFamily = font;
-                neonSignShowcase.style.color = color;
-                neonSignShowcase.innerText = text;
-
-            }
-        }
-    </script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
     <div class="navigation row">
-        <a href="#" class="navi-logo">
+        <a href="#id-homepage" class="navi-logo">
             <img aria-label="navi-logo-img">
         </a>
 
@@ -69,20 +31,21 @@
         </label>
 
 
-        
         <nav class="navi-nav">
             <ul class="navi-list">
-                <li class="navi-item"><a href="#" class="navi-link">Neon Lights</a></li>
-                <li class="navi-item"><a href="#" class="navi-link">Our Products</a></li>
-                <li class="navi-item"><a href="#" class="navi-link">About Us</a></li>
-                <li class="navi-item"><a href="#" class="navi-link">Contact</a></li>
+                <li class="navi-item"><a href="#id-neonLights" class="navi-link">Neon Lights</a></li>
+                <li class="navi-item"><a href="#id-ourProducts" class="navi-link">Our Products</a></li>
+                <li class="navi-item"><a href="#id-aboutUs" class="navi-link">About Us</a></li>
+                <li class="navi-item"><a href="#id-contactUs" class="navi-link">Contact</a></li>
             </ul>
         </nav>
+
+        <a href="#id-homepage" id="id-backtop" class="navi-backtop" title="Back to Top"></a>
 
 
     </div>
 
-    <div class="header row">
+    <div class="header row" id="id-homepage">
 
 
         <div class="header-content">
@@ -194,7 +157,7 @@
     </div>
 
 
-    <div class="container-fluid">
+    <div class="container-fluid" id='id-neonLights'>
         <div class="neon-bg">
             <p class="float-img1">Neon</p>
             <p class="float-img2">Light</p>
@@ -220,8 +183,8 @@
             </div>
             <div class="customise-canvas-body">
                 <div class="customise-canvas-phrase">
-                    <p id="neonSignShowcase">
-                        Sample
+                    <p id="neonSignShowcase" class="text-neon-red text-neon-small">
+                        Neon Sign Sample
                     </p>
                 </div>
             </div>
@@ -234,13 +197,13 @@
                 <lable>Neon Size</lable>
                 <div>
 
-                    <input type="radio" name="size" id="small" value="5vw" checked="checked">
+                    <input type="radio" name="size" id="small" value="small" checked="checked">
                     <label for="small" class="customise-size-btn">Small</label>
 
-                    <input type="radio" name="size" id="medium" value="10vw">
+                    <input type="radio" name="size" id="medium" value="medium">
                     <label for="medium" class="customise-size-btn">Medium</label>
 
-                    <input type="radio" name="size" id="large" value="20vw">
+                    <input type="radio" name="size" id="large" value="large">
                     <label for="large" class="customise-size-btn">Large</label>
                 </div>
             </div>
@@ -248,7 +211,7 @@
             <div class="customise-panel-phrase">
                 <lable for="customise-phrase-text">Neon phrase</lable>
                 <div>
-                    <textarea id="customise-phrase-text"></textarea>
+                    <textarea id="customise-phrase-text" placeholder="Type in the text and click try"></textarea>
                     <button class="customise-phrase-submit" id="try-btn">
                         try
                     </button>
@@ -261,8 +224,11 @@
                 <lable for="customise-font-sel">Font</lable>
                 <div>
                     <select id="customise-font-sel">
-                        <option value='"Times New Roman", Times, serif'>"Times New Roman", Times, serif</option>
-                        <option value='Arial, Helvetica, sans-serif;'>Arial, Helvetica, sans-serif;</option>
+                        <option value='Vampiro One' style="font-family:Vampiro One ;">Vampiro One</option>
+                        <option value='Monoton'>Monoton</option>
+                        <option value='Iceland'>Iceland</option>
+                        <option value='Pacifico'>Pacifico</option>
+                        <option value='Audiowide'>Audiowide</option>
                     </select>
                 </div>
 
@@ -301,11 +267,10 @@
 
     </div>
 
-    </div>
+    
 
 
-
-    <div class="container-fluid">
+    <div class="container-fluid" id='id-ourProducts'>
         <div class="row">
             <h1 class="display_rung">—</h1>
         </div>
@@ -316,7 +281,8 @@
             <p id="CompanyContent1" class="display_content">Vast is a company Lorem Ipsum is simply dummy text of the
                 printing and typ esetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since
                 the 1500s, when an</p>
-            <p id="CompanyContent2" class="display_content">Vast is a company Lorem Ipsum is simply dummy text of the</p>
+            <p id="CompanyContent2" class="display_content">Vast is a company Lorem Ipsum is simply dummy text of the
+            </p>
         </div>
         <div class="row box-top">
             <a id="LearnContent1" class="learn_style" href="#" target="_blank">Learn more
@@ -347,6 +313,10 @@
 
             </p>
             <a href="#">Learn more</a>
+
+            <p class="commercial-text-vertical">
+                Vast is a company Lorem Ipsum is
+            </p>
         </div>
 
         <img src="img/commercial/commercial8.jpg" class="col-x left-1" id="commercial-img_1_1">
@@ -360,8 +330,7 @@
 
     </div>
 
-
-    <div class="container-fluid">
+    <div class="container-fluid" >
         <h1 class="text-center client_rung">—</h1>
         <h1 class="text-center client_title">Featured Client</h1>
         <div class="row client_bottom_blank">
@@ -376,7 +345,8 @@
             </div>
         </div>
     </div>
-    <div class="contact row">
+
+    <div class="contact row" id="id-aboutUs">
         <div class="col-6 ">
             <p class="contact-head">Talk to us</p>
             <div class="contact-text">
@@ -405,7 +375,7 @@
         </div>
     </div>
 
-    <div class="footer row">
+    <div class="footer row" id="id-contactUs">
         <div class="col-4 ">
 
 
