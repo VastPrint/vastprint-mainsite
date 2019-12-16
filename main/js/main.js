@@ -82,9 +82,12 @@ window.onload = () => {
     })
 
     const neonTextPhrase = document.getElementById('customise-phrase-text');
+    console.log(neonTextPhrase);
     neonTextPhrase.oninput=()=>{
-        console.log(innerText)
-        neonSignShowcase.innerText=neonTextPhrase.innerText;
+    console.log(neonTextPhrase.innerText);
+    console.log(neonTextPhrase);
+       
+        neonSignShowcase.innerText=neonTextPhrase.text;
     }
   
 
