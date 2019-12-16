@@ -66,6 +66,7 @@ window.onload = () => {
     const neonSignShowcase = document.getElementById('neonSignShowcase');
 
     const neonSubmitBtn = document.getElementById('try-btn');
+ 
     neonSubmitBtn.onclick = () => {
 
         let size, text, font, color;
