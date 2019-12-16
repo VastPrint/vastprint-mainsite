@@ -26,7 +26,7 @@ const showBackTopButton = () => {
     }
 }
 
-const fontSelectInit = () => {
+const initFontSelect = () => {
     const fontSelectDiv = document.getElementsByClassName('font-select')[0];
     const fontSelected = document.getElementsByClassName('font-select-selected')[0];
     const fontSelectedText = document.getElementsByClassName('font-select-selected-text')[0];
@@ -60,15 +60,12 @@ const fontSelectInit = () => {
 
 }
 
-
-
-
-window.onload = () => {
-    fontSelectInit();
+const initNeonSignControl=()=>{
+    initFontSelect();
     const neonSignShowcase = document.getElementById('neonSignShowcase');
 
 
-    let size, text, font, color;
+    let size='small', text, font, color='red';
     const neonSizeRadios = document.getElementsByName("size");
     neonSizeRadios.forEach((selectedSize) => {
         selectedSize.addEventListener('click', () => {
@@ -82,17 +79,12 @@ window.onload = () => {
     })
 
     const neonTextPhrase = document.getElementById('customise-phrase-text');
-    console.log(neonTextPhrase);
     neonTextPhrase.oninput=()=>{
-    console.log(neonTextPhrase.innerText);
-    console.log(neonTextPhrase);
-       
-        neonSignShowcase.innerText=neonTextPhrase.text;
+        neonSignShowcase.innerText=neonTextPhrase.value;
+        if(neonTextPhrase.value===""){
+            neonSignShowcase.innerText="Neon Sign Sample";
+        }
     }
-  
-
-
-
     const neonFontListItems = document.querySelectorAll('.font-select-item');
     neonFontListItems.forEach((selectedFont) => {
         selectedFont.addEventListener('click', () => {
@@ -111,7 +103,13 @@ window.onload = () => {
         })
 
     })
+}
 
+
+window.onload = () => {
+  
+    initNeonSignControl();
+    smoothScroll();
 
 
 
@@ -128,7 +126,6 @@ window.onload = () => {
     x.addListener(myFunction);
 
 
-
     const naviItems = document.getElementsByClassName("navi-item");
     for (let i = 0; i < naviItems.length; i++) {
         naviItems[i].onclick = () => {
@@ -136,14 +133,6 @@ window.onload = () => {
         }
     }
 
-
-
-
-
-
-
-    smoothScroll();
-    
 }
 window.onscroll = function () {
     showBackTopButton();
