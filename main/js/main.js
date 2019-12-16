@@ -27,75 +27,89 @@ const showBackTopButton = () => {
 }
 
 const fontSelectInit = () => {
-    const fontSelectDiv=document.getElementsByClassName('font-select')[0];
-    const fontSelected=document.getElementsByClassName('font-select-selected')[0];
-    const fontSelectedText=document.getElementsByClassName('font-select-selected-text')[0];
-  
-    
-    const fontSelectDropdown=document.getElementsByClassName('font-select-dropdown')[0];
+    const fontSelectDiv = document.getElementsByClassName('font-select')[0];
+    const fontSelected = document.getElementsByClassName('font-select-selected')[0];
+    const fontSelectedText = document.getElementsByClassName('font-select-selected-text')[0];
 
-    
-    fontSelected.onclick= ()=>{
-        if(fontSelectDropdown.style.display=="none")
-            fontSelectDropdown.style.display="block";
-        else if(fontSelectDropdown.style.display=="block")
-            fontSelectDropdown.style.display="none";
+
+    const fontSelectDropdown = document.getElementsByClassName('font-select-dropdown')[0];
+
+
+
+    fontSelected.onclick = () => {
+        if (fontSelectDropdown.style.display == "none")
+            fontSelectDropdown.style.display = "block";
+        else if (fontSelectDropdown.style.display == "block")
+            fontSelectDropdown.style.display = "none";
     }
 
-    const fontSelectItem=document.getElementsByClassName('font-select-item');
-    for(let i=0;i<fontSelectItem.length;i++){
-        fontSelectItem[i].onclick= ()=>{
-           
-            fontSelectedText.innerText=fontSelectItem[i].innerText;
-            fontSelectDropdown.style.display="none";
+    const fontSelectItem = document.getElementsByClassName('font-select-item');
+    for (let i = 0; i < fontSelectItem.length; i++) {
+        fontSelectItem[i].onclick = () => {
+
+            fontSelectedText.text = fontSelectItem[i].innerText;
+            fontSelectedText.style.fontFamily = fontSelectItem[i].style.fontFamily;
+            fontSelectedText.setAttribute("value", fontSelectItem[i].innerText);
+            fontSelectDropdown.style.display = "none";
+
+
         }
-    
+
     }
-    
+
 
 }
 
 
 
-window.onload = () => {
-    const neonSizeRadio = document.getElementsByName("size");
-    const neonTextPhrase = document.getElementById('customise-phrase-text');
-    const neonFontSel = document.getElementById("customise-font-sel");
-    const neonColorRadio = document.getElementsByName("color");
 
+window.onload = () => {
+    fontSelectInit();
     const neonSignShowcase = document.getElementById('neonSignShowcase');
 
-    const neonSubmitBtn = document.getElementById('try-btn');
- 
-    neonSubmitBtn.onclick = () => {
 
-        let size, text, font, color;
-
-        for (let i = 0; i < neonSizeRadio.length; i++) {
-            if (neonSizeRadio[i].checked) {
-                size = neonSizeRadio[i].value;
+    let size, text, font, color;
+    const neonSizeRadios = document.getElementsByName("size");
+    neonSizeRadios.forEach((selectedSize) => {
+        selectedSize.addEventListener('click', () => {
+            if (selectedSize.checked) {
+                console.log(selectedSize.value);
+                size = selectedSize.value;
+                neonSignShowcase.setAttribute('class', `text-neon-${color} text-neon-${size} `);
             }
-        }
+        })
 
-        text = neonTextPhrase.value;
-        font = neonFontSel[neonFontSel.selectedIndex].value;
-        for (let i = 0; i < neonColorRadio.length; i++) {
-            if (neonColorRadio[i].checked) {
-                color = neonColorRadio[i].value;
-            }
-        }
+    })
 
-        let tmpClassName = `text-neon-${color} text-neon-${size} `
-
-
-        neonSignShowcase.style.fontFamily = font;
-        neonSignShowcase.setAttribute('class', tmpClassName);
-
-
-        neonSignShowcase.innerText = text;
-
-
+    const neonTextPhrase = document.getElementById('customise-phrase-text');
+    neonTextPhrase.oninput=()=>{
+        console.log(innerText)
+        neonSignShowcase.innerText=neonTextPhrase.innerText;
     }
+  
+
+
+
+    const neonFontListItems = document.querySelectorAll('.font-select-item');
+    neonFontListItems.forEach((selectedFont) => {
+        selectedFont.addEventListener('click', () => {
+            neonSignShowcase.style.fontFamily = selectedFont.style.fontFamily;
+            font = selectedFont.style.fontFamily;
+        })
+    });
+    const neonColorRadios = document.getElementsByName("color");
+    neonColorRadios.forEach((selectedColor) => {
+        selectedColor.addEventListener('click', () => {
+            if (selectedColor.checked) {
+                console.log(selectedColor.value);
+                color = selectedColor.value;
+                neonSignShowcase.setAttribute('class', `text-neon-${color} text-neon-${size} `);
+            }
+        })
+
+    })
+
+
 
 
     const naviCheckBox = document.getElementById('navi-toggle');
@@ -126,7 +140,7 @@ window.onload = () => {
 
 
     smoothScroll();
-    fontSelectInit();
+    
 }
 window.onscroll = function () {
     showBackTopButton();
