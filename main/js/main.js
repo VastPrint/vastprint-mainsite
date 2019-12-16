@@ -1,3 +1,4 @@
+
 const smoothScroll = () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -17,12 +18,41 @@ const showBackTopButton = () => {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         btnBackTop.style.visibility = "visible";
         btnBackTop.style.opacity = 0.8;
-     
+
     } else {
         btnBackTop.style.visibility = "hidden";
         btnBackTop.style.opacity = 0;
 
     }
+}
+
+const fontSelectInit = () => {
+    const fontSelectDiv=document.getElementsByClassName('font-select')[0];
+    const fontSelected=document.getElementsByClassName('font-select-selected')[0];
+    const fontSelectedText=document.getElementsByClassName('font-select-selected-text')[0];
+  
+    
+    const fontSelectDropdown=document.getElementsByClassName('font-select-dropdown')[0];
+
+    
+    fontSelected.onclick= ()=>{
+        if(fontSelectDropdown.style.display=="none")
+            fontSelectDropdown.style.display="block";
+        else if(fontSelectDropdown.style.display=="block")
+            fontSelectDropdown.style.display="none";
+    }
+
+    const fontSelectItem=document.getElementsByClassName('font-select-item');
+    for(let i=0;i<fontSelectItem.length;i++){
+        fontSelectItem[i].onclick= ()=>{
+           
+            fontSelectedText.innerText=fontSelectItem[i].innerText;
+            fontSelectDropdown.style.display="none";
+        }
+    
+    }
+    
+
 }
 
 
@@ -93,10 +123,11 @@ window.onload = () => {
 
 
 
-    
+
     smoothScroll();
+    fontSelectInit();
 }
-window.onscroll = function() {
+window.onscroll = function () {
     showBackTopButton();
 
 };

@@ -1,0 +1,77 @@
+.font-select {
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+  
+
+
+    .font-select-selected {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content:space-between;
+        width:15vw;
+        border: 1px solid white;
+   
+
+        span{
+
+        }
+        div  
+        {
+            background-image:  url("../img/icon/dropdown.png") ;
+            background-repeat: no-repeat; 
+            background-size:contain;
+
+            filter: invert(100%);
+
+            height: 1.5vw;
+            width: 1.5vw;
+
+            cursor: pointer;
+            font-weight: bold;
+            float:right;
+           
+            
+        }
+
+
+    }
+
+    .font-select-dropdown{
+        position: absolute;
+        top:1.5vw;
+        left:0px;
+        width:100%;
+        background-color: black;
+        border:white 1px solid;
+
+        .font-select-list {
+            margin: 0 4px 4px 0;
+            max-height: 190px;
+            width: 200px;
+            padding: 0 0 0 4px;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+
+
+            .font-select-item {
+                line-height: 80%;
+                padding: 7px 7px 8px;
+                margin: 0;
+                list-style: none;
+                font-size: 18px;
+
+                &:hover{
+                    background:rgb(0, 110, 255);
+                }
+            }
+
+
+        }
+
+    }
+}
+

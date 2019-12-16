@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro:900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Vampiro+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Dosis|Fjalla+One|Montserrat|Open+Sans+Condensed:300|Pinyon+Script|Sacramento|Satisfy&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -77,15 +78,15 @@
 }
 
 .text-neon-small {
-  font-size: 2vw;
+  font-size: 3.5vw;
 }
 
 .text-neon-medium {
-  font-size: 5vw;
+  font-size: 5.5vw;
 }
 
 .text-neon-large {
-  font-size: 10vw;
+  font-size: 7.5vw;
 }
 
 .text-neon-base, .text-neon-red, .text-neon-yellow, .text-neon-blue, .text-neon-green, .text-neon-orange, .text-neon-dark {
@@ -97,7 +98,7 @@
 
 .text-neon-red {
   color: #ffd8d8;
-  text-shadow: .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8,  .1vw 0vw   0vw #f25757, .2vw 0vw   0vw #f25757, .4vw 0vw   0vw #f25757, .1vw 0vw  .1vw #f25757, .2vw 0vw  .1vw #f25757, .4vw 0vw  .1vw #f25757, .1vw 0vw   2vw #f25757, .2vw 0vw   2vw #f25757, .4vw 0vw   2vw #f25757,  .1vw 0vw   1vw #e50b0b, .2vw 0vw   1vw #e50b0b, .4vw 0vw   5vw #e50b0b,  .1vw 0vw   5vw #e50b0b, .2vw 0vw  20vw #e50b0b, .4vw 0vw  10vw #e50b0b, .1vw 0vw  10vw #e50b0b, .2vw 0vw  30vw #e50b0b, .4vw 0vw  10vw #e50b0b;
+  text-shadow: .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8,  .1vw 0vw   0vw #f25757, .2vw 0vw   0vw #f25757, .4vw 0vw   0vw #f25757, .1vw 0vw  .1vw #f25757, .2vw 0vw  .1vw #f25757, .4vw 0vw  .1vw #f25757, .1vw 0vw   2vw #f25757, .2vw 0vw   2vw #f25757, .4vw 0vw   2vw #f25757,  .1vw 0vw   1vw #e50b0b, .2vw 0vw   1vw #e50b0b, .4vw 0vw   5vw #e50b0b,  .1vw 0vw   5vw #e50b0b, .2vw 0vw  20vw #e50b0b, .4vw 0vw  10vw #e50b0b, .1vw 0vw  10vw #e50b0b, .2vw 0vw  30vw #e50b0b, .4vw 0vw  10vw #e50b0b;
 }
 
 .text-neon-yellow {
@@ -306,6 +307,73 @@
   bottom: auto;
   top: 0;
   width: 70%;
+}
+
+.font-select {
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.font-select .font-select-selected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 15vw;
+  border: 1px solid white;
+}
+
+.font-select .font-select-selected div {
+  background-image: url("../img/icon/dropdown.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  height: 1.5vw;
+  width: 1.5vw;
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+}
+
+.font-select .font-select-dropdown {
+  position: absolute;
+  top: 1.5vw;
+  left: 0px;
+  width: 100%;
+  background-color: black;
+  border: white 1px solid;
+}
+
+.font-select .font-select-dropdown .font-select-list {
+  margin: 0 4px 4px 0;
+  max-height: 190px;
+  width: 200px;
+  padding: 0 0 0 4px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.font-select .font-select-dropdown .font-select-list .font-select-item {
+  line-height: 80%;
+  padding: 7px 7px 8px;
+  margin: 0;
+  list-style: none;
+  font-size: 18px;
+}
+
+.font-select .font-select-dropdown .font-select-list .font-select-item:hover {
+  background: #006eff;
 }
 
 .navigation {
@@ -695,7 +763,7 @@
 }
 
 .customise .customise-canvas .customise-canvas-body {
-  background-image: url("../img/customise/customise1.png");
+  background-image: url("../img/customise/customise-bg.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: top;
