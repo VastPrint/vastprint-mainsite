@@ -11,34 +11,38 @@
     color: grey;
 }
 
-.text-neon-small{
-    font-size:3.5vw;
+.text-neon-small {
+    font-size: 3.5vw;
 }
-.text-neon-medium{
-    font-size:5.5vw;
+
+.text-neon-medium {
+    font-size: 5.5vw;
 }
-.text-neon-large{
-    font-size:7.5vw;
+
+.text-neon-large {
+    font-size: 7.5vw;
 }
-.text-neon-base{
+
+.text-neon-base {
     color: #fff;
-    text-align:center;
+    text-align: center;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
-.text-neon-red{
+.text-neon-red {
     @extend .text-neon-base;
     color: #ffd8d8;
-    text-shadow: 
-  .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8, 
-  .1vw 0vw   0vw #f25757, .2vw 0vw   0vw #f25757, .4vw 0vw   0vw #f25757,
-  .1vw 0vw  .1vw #f25757, .2vw 0vw  .1vw #f25757, .4vw 0vw  .1vw #f25757,
-  .1vw 0vw   2vw #f25757, .2vw 0vw   2vw #f25757, .4vw 0vw   2vw #f25757, 
-  .1vw 0vw   1vw #e50b0b, .2vw 0vw   1vw #e50b0b, .4vw 0vw   5vw #e50b0b, 
-  .1vw 0vw   5vw #e50b0b, .2vw 0vw  20vw #e50b0b, .4vw 0vw  10vw #e50b0b,
-  .1vw 0vw  10vw #e50b0b, .2vw 0vw  30vw #e50b0b, .4vw 0vw  10vw #e50b0b;
+    text-shadow:
+        .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8,
+        .1vw 0vw 0vw #f25757, .2vw 0vw 0vw #f25757, .4vw 0vw 0vw #f25757,
+        .1vw 0vw .1vw #f25757, .2vw 0vw .1vw #f25757, .4vw 0vw .1vw #f25757,
+        .1vw 0vw 2vw #f25757, .2vw 0vw 2vw #f25757, .4vw 0vw 2vw #f25757,
+        .1vw 0vw 1vw #e50b0b, .2vw 0vw 1vw #e50b0b, .4vw 0vw 5vw #e50b0b,
+        .1vw 0vw 5vw #e50b0b, .2vw 0vw 20vw #e50b0b, .4vw 0vw 10vw #e50b0b,
+        .1vw 0vw 10vw #e50b0b, .2vw 0vw 30vw #e50b0b, .4vw 0vw 10vw #e50b0b;
 }
+
 // .text-neon-red{
 //     @extend .text-neon-base;
 //     // color: #FF1177;
@@ -48,34 +52,35 @@
 
 // }
 
-.text-neon-yellow{
+.text-neon-yellow {
     @extend .text-neon-base;
-    color: #FFDD1B;
+    // color: #FFDD1B;
     -webkit-animation: neon-yellow 1.5s ease-in-out infinite alternate;
     -moz-animation: neon-yellow 1.5s ease-in-out infinite alternate;
     animation: neon-yellow 1.5s ease-in-out infinite alternate;
 
 }
 
-.text-neon-blue{
-     @extend .text-neon-base;
-     color: #228DFF;
+.text-neon-blue {
+    @extend .text-neon-base;
+    // color: #228DFF;
     -webkit-animation: neon-blue 1.5s ease-in-out infinite alternate;
     -moz-animation: neon-blue 1.5s ease-in-out infinite alternate;
     animation: neon-blue 1.5s ease-in-out infinite alternate;
 
 }
 
-.text-neon-green{
-     @extend .text-neon-base;
-     color: #B6FF00;
+.text-neon-green {
+    @extend .text-neon-base;
+    color: #B6FF00;
 
     -webkit-animation: neon-green 1.5s ease-in-out infinite alternate;
     -moz-animation: neon-green 1.5s ease-in-out infinite alternate;
     animation: neon-green 1.5s ease-in-out infinite alternate;
 
 }
-.text-neon-orange{
+
+.text-neon-orange {
     @extend .text-neon-base;
     color: #FF9900;
 
@@ -85,7 +90,7 @@
 
 }
 
-.text-neon-dark{
+.text-neon-dark {
     @extend .text-neon-base;
     color: rgb(12, 12, 12);
 
@@ -100,11 +105,27 @@
 
 @keyframes neon-red {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+        text-shadow: 
+        0 0 10px #fff, 
+        0 0 20px #fff, 
+        0 0 30px #fff, 
+        0 0 40px #FF1177, 
+        0 0 70px #FF1177, 
+        0 0 80px #FF1177, 
+        0 0 100px #FF1177, 
+        0 0 150px #FF1177;
     }
 
     to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+        text-shadow: 
+        0 0 5px #fff, 
+        0 0 10px #fff, 
+        0 0 15px #fff, 
+        0 0 20px #FF1177, 
+        0 0 35px #FF1177, 
+        0 0 40px #FF1177, 
+        0 0 50px #FF1177, 
+        0 0 75px #FF1177;
     }
 }
 

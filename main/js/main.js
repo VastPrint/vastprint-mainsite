@@ -65,7 +65,17 @@ const initNeonSignControl=()=>{
     const neonSignShowcase = document.getElementById('neonSignShowcase');
 
 
-    let size='small', text, font, color='red';
+    let size='small';
+    let text='Neon Sign Sample';
+    let font="font-family:'Pinyon Script', cursive;";
+    let color='red';
+    neonSignShowcase.setAttribute('class',`text-neon-${color} text-neon-${size}`);
+    neonSignShowcase.innerText=text;
+    neonSignShowcase.style=font;
+  
+
+
+
     const neonSizeRadios = document.getElementsByName("size");
     neonSizeRadios.forEach((selectedSize) => {
         selectedSize.addEventListener('click', () => {
