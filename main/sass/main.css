@@ -90,7 +90,7 @@
   font-size: 7.5vw;
 }
 
-.text-neon-base, .text-neon-red, .text-neon-yellow, .text-neon-blue, .text-neon-green, .text-neon-orange, .text-neon-dark {
+.text-neon-base, .text-neon-red, .text-neon-yellow, .text-neon-blue, .text-neon-green, .text-neon-white {
   color: #fff;
   text-align: center;
   -webkit-transition: all 0.5s;
@@ -99,35 +99,27 @@
 
 .text-neon-red {
   color: #ffd8d8;
-  text-shadow: .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8, .1vw 0vw 0vw #f25757, .2vw 0vw 0vw #f25757, .4vw 0vw 0vw #f25757, .1vw 0vw .1vw #f25757, .2vw 0vw .1vw #f25757, .4vw 0vw .1vw #f25757, .1vw 0vw 2vw #f25757, .2vw 0vw 2vw #f25757, .4vw 0vw 2vw #f25757, .1vw 0vw 1vw #e50b0b, .2vw 0vw 1vw #e50b0b, .4vw 0vw 5vw #e50b0b, .1vw 0vw 5vw #e50b0b, .2vw 0vw 20vw #e50b0b, .4vw 0vw 10vw #e50b0b, .1vw 0vw 10vw #e50b0b, .2vw 0vw 30vw #e50b0b, .4vw 0vw 10vw #e50b0b;
+  text-shadow: 0 0vw .25vw #ffd8d8, 0 0vw 0vw #f25757,  0 0vw .1vw #f25757,   0 0vw 2vw #f25757,   0 0vw 1vw #e50b0b,   0 0vw 5vw #e50b0b,  0 0vw 10vw #e50b0b;
 }
 
 .text-neon-yellow {
-  -webkit-animation: neon-yellow 1.5s ease-in-out infinite alternate;
-  animation: neon-yellow 1.5s ease-in-out infinite alternate;
+  color: #fcfac1;
+  text-shadow: 0 0vw .25vw #fcfac1, 0 0vw 0vw #e7ff5c,  0 0vw .1vw #e7ff5c,   0 0vw 2vw #e7ff5c,   0 0vw 1vw #eeff00,   0 0vw 5vw #eeff00,  0 0vw 10vw #eeff00;
 }
 
 .text-neon-blue {
-  -webkit-animation: neon-blue 1.5s ease-in-out infinite alternate;
-  animation: neon-blue 1.5s ease-in-out infinite alternate;
+  color: #97d2fd;
+  text-shadow: 0 0vw .25vw #97d2fd, 0 0vw 0vw #3b9efa,  0 0vw .1vw #3b9efa,   0 0vw 2vw #3b9efa,   0 0vw 1vw #003cff,   0 0vw 5vw #003cff,  0 0vw 10vw #003cff;
 }
 
 .text-neon-green {
-  color: #B6FF00;
-  -webkit-animation: neon-green 1.5s ease-in-out infinite alternate;
-  animation: neon-green 1.5s ease-in-out infinite alternate;
+  color: #a0fd97;
+  text-shadow: 0 0vw .25vw #a0fd97, 0 0vw 0vw #6bfc58,  0 0vw .1vw #6bfc58,   0 0vw 2vw #6bfc58,   0 0vw 1vw #1eff00,   0 0vw 5vw #1eff00,  0 0vw 10vw #1eff00;
 }
 
-.text-neon-orange {
-  color: #FF9900;
-  -webkit-animation: neon-green 1.5s ease-in-out infinite alternate;
-  animation: neon-green 1.5s ease-in-out infinite alternate;
-}
-
-.text-neon-dark {
-  color: #0c0c0c;
-  -webkit-animation: neon-dark 1.5s ease-in-out infinite alternate;
-  animation: neon-dark 1.5s ease-in-out infinite alternate;
+.text-neon-white {
+  color: #ffffff;
+  text-shadow: 0 0vw .25vw #ffffff, 0 0vw 0vw #ffffff,  0 0vw .1vw #ffffff,   0 0vw 2vw #ffffff,   0 0vw 1vw #ffffff,   0 0vw 5vw #ffffff;
 }
 
 /*glow*/
@@ -260,6 +252,10 @@
 
 .bg-dark {
   background-color: rgba(21, 1, 1, 0.9);
+}
+
+.bg-white {
+  background-color: white;
 }
 
 .btn-2 {

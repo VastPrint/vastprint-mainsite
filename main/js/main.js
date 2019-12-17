@@ -30,10 +30,7 @@ const initFontSelect = () => {
     const fontSelectDiv = document.getElementsByClassName('font-select')[0];
     const fontSelected = document.getElementsByClassName('font-select-selected')[0];
     const fontSelectedText = document.getElementsByClassName('font-select-selected-text')[0];
-
-
     const fontSelectDropdown = document.getElementsByClassName('font-select-dropdown')[0];
-
 
 
     fontSelected.onclick = () => {
@@ -44,15 +41,14 @@ const initFontSelect = () => {
     }
 
     const fontSelectItem = document.getElementsByClassName('font-select-item');
+    fontSelectedText.innerText = fontSelectItem[0].innerText;
+    fontSelectedText.style.fontFamily = fontSelectItem[0].style.fontFamily;
+
     for (let i = 0; i < fontSelectItem.length; i++) {
         fontSelectItem[i].onclick = () => {
-
-            fontSelectedText.text = fontSelectItem[i].innerText;
+            fontSelectedText.innerText = fontSelectItem[i].innerText;
             fontSelectedText.style.fontFamily = fontSelectItem[i].style.fontFamily;
-            fontSelectedText.setAttribute("value", fontSelectItem[i].innerText);
             fontSelectDropdown.style.display = "none";
-
-
         }
 
     }
@@ -60,23 +56,41 @@ const initFontSelect = () => {
 
 }
 
-const initNeonSignControl=()=>{
+const initNeonSignControl = () => {
     initFontSelect();
     const neonSignShowcase = document.getElementById('neonSignShowcase');
-
-
-    let size='small';
-    let text='Neon Sign Sample';
-    let font="font-family:'Pinyon Script', cursive;";
-    let color='red';
-    neonSignShowcase.setAttribute('class',`text-neon-${color} text-neon-${size}`);
-    neonSignShowcase.innerText=text;
-    neonSignShowcase.style=font;
-  
-
-
-
     const neonSizeRadios = document.getElementsByName("size");
+    const neonTextPhrase = document.getElementById('customise-phrase-text');
+    const neonSelectedFont = document.getElementsByClassName('font-select-selected-text')[0];
+
+    const neonFontListItems = document.querySelectorAll('.font-select-item');
+    const neonColorRadios = document.getElementsByName("color");
+
+
+    let size = 'small';
+    neonSizeRadios.forEach((selectedSize) => {
+        if (selectedSize.checked == true) {
+            size = selectedSize.value;
+        }
+    }
+    )
+    let text = 'Neon Sign Sample';
+    let font = neonSelectedFont.textContent;
+
+    let color = 'red';
+    neonColorRadios.forEach((selectedColor) => {
+        if (selectedColor.checked == true) {
+            color = selectedColor.value;
+        }
+    })
+
+    neonSignShowcase.setAttribute('class', `text-neon-${color} text-neon-${size}`);
+    neonSignShowcase.innerText = text;
+    neonSignShowcase.style.fontFamily = font;
+
+
+
+
     neonSizeRadios.forEach((selectedSize) => {
         selectedSize.addEventListener('click', () => {
             if (selectedSize.checked) {
@@ -88,21 +102,18 @@ const initNeonSignControl=()=>{
 
     })
 
-    const neonTextPhrase = document.getElementById('customise-phrase-text');
-    neonTextPhrase.oninput=()=>{
-        neonSignShowcase.innerText=neonTextPhrase.value;
-        if(neonTextPhrase.value===""){
-            neonSignShowcase.innerText="Neon Sign Sample";
+    neonTextPhrase.oninput = () => {
+        neonSignShowcase.innerText = neonTextPhrase.value;
+        if (neonTextPhrase.value === "") {
+            neonSignShowcase.innerText = "Neon Sign Sample";
         }
     }
-    const neonFontListItems = document.querySelectorAll('.font-select-item');
-    neonFontListItems.forEach((selectedFont) => {
-        selectedFont.addEventListener('click', () => {
-            neonSignShowcase.style.fontFamily = selectedFont.style.fontFamily;
-            font = selectedFont.style.fontFamily;
+    neonFontListItems.forEach((fontItem) => {
+        fontItem.addEventListener('click', () => {
+            neonSignShowcase.style.fontFamily = fontItem.style.fontFamily;
+            font = fontItem.style.fontFamily;
         })
     });
-    const neonColorRadios = document.getElementsByName("color");
     neonColorRadios.forEach((selectedColor) => {
         selectedColor.addEventListener('click', () => {
             if (selectedColor.checked) {
@@ -117,7 +128,7 @@ const initNeonSignControl=()=>{
 
 
 window.onload = () => {
-  
+
     initNeonSignControl();
     smoothScroll();
 
