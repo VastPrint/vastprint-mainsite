@@ -448,6 +448,9 @@
   .navigation .navi-button .navi-icon::after {
     top: 2vw;
   }
+  .navigation .navi-button:hover {
+    cursor: pointer;
+  }
   .navigation .navi-button:hover .navi-icon:before {
     top: -2.5vw;
   }

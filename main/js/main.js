@@ -56,7 +56,9 @@ const initFontSelect = () => {
 
     //close dropdown when click outside selection
     document.onclick = function(e){
-        if(e.target.getAttribute('class')!== 'font-select-selected'){
+        if(e.target.getAttribute('class')!== 'font-select-selected'
+        &&e.target.getAttribute('class')!== 'font-select-selected-text'
+        &&e.target.getAttribute('class')!== 'font-select-icon'){
             fontSelectDropdown.style.display = 'none';
         }
      };
