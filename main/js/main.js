@@ -54,6 +54,13 @@ const initFontSelect = () => {
     }
 
 
+    //close dropdown when click outside selection
+    document.onclick = function(e){
+        if(e.target.getAttribute('class')!== 'font-select-selected'){
+            fontSelectDropdown.style.display = 'none';
+        }
+     };
+
 }
 
 const initNeonSignControl = () => {
