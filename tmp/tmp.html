@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="http://www.jqueryscript.net/demo/Easy-Google-Web-Font-Selector-With-jQuery-Fontselect/fontselect.css" />
+
+<script src="http://www.jqueryscript.net/demo/Easy-Google-Web-Font-Selector-With-jQuery-Fontselect/jquery.fontselect.js"></script>
+
+<style>
+ body { padding:50px; background-color:#333;}
+p, h1 { color:#fff;}
+</style>
+
+</head>
+<body>
+
+<script>
+  $(function(){
+	$('#font').fontselect().change(function(){
+
+	  // replace + signs with spaces for css
+	  var font = $(this).val().replace(/\+/g, ' ');
+
+	  // split font into family and weight
+	  font = font.split(':');
+
+	  // set family on paragraphs
+	  $('p').css('font-family', font[0]);
+	});
+  });
+
+</script>
+
+<script>
+  $("#size").change(function() {
+  $('p').css("font-size", $(this).val() + "px");
+ });
+</script>
+
+<select id="size">
+	<option value="7">7</option>
+	<option value="10">10</option>
+	<option value="20">20</option>
+	<option value="30">30</option>
+</select>
+
+<p>&nbsp;</p>
+
+<input id="font" type="text" />
+
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+</body>
+</html>

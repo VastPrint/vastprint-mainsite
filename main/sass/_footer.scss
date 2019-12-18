@@ -1,0 +1,47 @@
+.footer{
+    background:rgb(204,204,204);
+    font-family: 'Roboto', sans-serif;
+
+
+    div[class*="col-"]{
+        padding:30px 50px;
+
+
+        .footer-head{
+            font-size:1.5rem;
+            margin-bottom:1rem;
+            font-weight:900;
+    
+        }
+        .footer-text{
+            font-size:1.5rem;
+            @include breakpoint($breakpoint-sm){
+                font-size:.7rem;
+            }
+    
+            img{
+                height:2.5rem;
+                margin-right:1rem;
+            }
+        }
+
+       
+    }
+
+    
+    .foot-copyright{
+        @media only screen  and (min-width:768px){
+            margin-bottom: 5vw;
+            font-size:1rem;
+        }
+        @media only screen  and (max-width:768px){
+            padding-bottom: 5vw;
+            font-size:3rem;
+        }
+     
+
+    }
+
+   
+   
+}

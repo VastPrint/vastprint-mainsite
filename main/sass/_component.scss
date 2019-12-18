@@ -1,0 +1,61 @@
+.bg-red{
+    background-color:rgba(252,79,82,.9)
+}
+.bg-yellow{
+    background-color:rgba(254,226,91,.9)
+}
+.bg-blue{
+    background-color:rgba(82,168,252,.9)
+}
+.bg-green{
+    background-color:rgba(87,253,131,.9)
+}
+.bg-dark{
+    background-color:rgba(21,1,1,.9)
+}
+.bg-white{
+  background-color:rgba(255,255,255,1)
+}
+
+
+
+.btn-2 {
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+      letter-spacing: 0;
+  
+  }
+  
+  .btn-2:hover,
+  .btn-2:active {
+    letter-spacing: 5px;
+  }
+  
+  .btn-2:after,
+  .btn-2:before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#fff, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+  }
+  
+  .btn-2:hover:after,
+  .btn-2:hover:before {
+    backface-visibility: hidden;
+    border-color: #fff;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+  }
+  
+  .btn-2:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+  }
+  

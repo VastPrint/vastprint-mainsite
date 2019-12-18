@@ -1,0 +1,35 @@
+//@mixin set-colors($bg-color,$txt-color){
+//    background-color: $bg-color;
+//    color: $txt-color;
+//}
+//
+//@mixin set-theme-color(){
+//    @include set-colors($theme-color, white);
+//}
+
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media only screen and (min-width: 600px) { @content; }
+  }
+  @else if $point == medium {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $point == wide {
+    @media only screen and (min-width: 1000px) { @content; }
+  }
+  @else if $point == xwide {
+    @media only screen and (min-width: 1400px) { @content; }
+  }
+    @else if $point == xxwide {
+    @media only screen and (min-width: 2000px) { @content; }
+  }
+}
+
+@mixin disable-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

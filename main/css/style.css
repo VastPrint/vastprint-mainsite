@@ -1,0 +1,17 @@
+
+.container-fluid {
+	width: 100%; 
+	 padding-right: 0px;
+	padding-left: 0px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.box-top {
+	margin-top: 4vh;
+}
+
+.image-fluid {
+	max-width: 100%;
+	height: auto;
+}
