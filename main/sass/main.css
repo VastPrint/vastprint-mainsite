@@ -8,7 +8,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid grey;
 }
 
 *::before, *::after {
@@ -585,7 +584,6 @@
   }
   .header .header-logo .header-logo-main {
     font-size: 27vw;
-    font-family: FUTURAMC;
   }
   .header .header-logo .header-logo-main .header-logo-main-base {
     display: none;
@@ -637,7 +635,6 @@
   .header .header-logo .header-logo-main {
     position: relative;
     font-size: 14.7vw;
-    font-family: FUTURAMC;
   }
   .header .header-logo .header-logo-main .header-logo-main-base {
     position: absolute;
@@ -706,8 +703,8 @@
 
 @media only screen and (min-width: 768px) {
   .customise .customise-canvas {
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 7vw;
+    padding-right: 2vw;
   }
 }
 
@@ -781,7 +778,7 @@
 @media only screen and (min-width: 768px) {
   .customise .customise-panel {
     padding-left: 5vw;
-    padding-right: 5vw;
+    padding-bottom: 3vw;
   }
 }
 
