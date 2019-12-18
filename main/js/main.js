@@ -1,3 +1,4 @@
+document.write("<script type='text/javascript' src='js/zoomerang.js'></script>");
 
 const smoothScroll = () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -9,8 +10,7 @@ const smoothScroll = () => {
             });
         });
     });
-}
-
+};
 
 
 const showBackTopButton = () => {
@@ -18,13 +18,49 @@ const showBackTopButton = () => {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         btnBackTop.style.visibility = "visible";
         btnBackTop.style.opacity = 0.8;
-
+     
     } else {
         btnBackTop.style.visibility = "hidden";
         btnBackTop.style.opacity = 0;
 
     }
-}
+};
+
+
+const zoomFunc = function () {
+    Zoomerang
+        .config({
+            maxWidth: 600,
+            maxHeight: 650,
+            // bgColor: '#000',
+            bgOpacity: .85,
+            onOpen: openCallback,
+            onClose: closeCallback,
+            onBeforeOpen: beforeOpenCallback,
+            onBeforeClose: beforeCloseCallback,
+        })
+        .listen(".dp-1-5");
+
+    function openCallback(el) {
+        console.log('zoomed in on: ');
+        console.log(el)
+    }
+
+    function closeCallback(el) {
+        console.log('zoomed out on: ');
+        console.log(el)
+    }
+
+    function beforeOpenCallback(el) {
+        console.log('on before zoomed in on:');
+        console.log(el)
+    }
+
+    function beforeCloseCallback(el) {
+        console.log('on before zoomed out on:');
+        console.log(el)
+    }
+};
 
 const initFontSelect = () => {
     const fontSelectDiv = document.getElementsByClassName('font-select')[0];
@@ -53,7 +89,6 @@ const initFontSelect = () => {
 
     }
 
-
     //close dropdown when click outside selection
     document.onclick = function(e){
         if(e.target.getAttribute('class')!== 'font-select-selected'
@@ -74,7 +109,6 @@ const initNeonSignControl = () => {
 
     const neonFontListItems = document.querySelectorAll('.font-select-item');
     const neonColorRadios = document.getElementsByName("color");
-
 
     let size = 'small';
     neonSizeRadios.forEach((selectedSize) => {
@@ -163,8 +197,11 @@ window.onload = () => {
         }
     }
 
-}
-window.onscroll = function () {
+    // display images zoom in and out
+    zoomFunc();
+};
+
+window.onscroll = function() {
     showBackTopButton();
 
 };

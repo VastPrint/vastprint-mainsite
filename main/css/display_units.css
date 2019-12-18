@@ -2,6 +2,9 @@
 	margin-top: 4vh;
 }
 
+.zoom {
+    cursor: pointer;
+}
 
 
 @media screen and (max-width: 768px){
@@ -27,8 +30,8 @@
     }
 
     .dp-1-5{
-        width: 100%;
-        float:left;
+        width: 100vw;
+        float: left;
     }
 
     .display_rung{
@@ -157,8 +160,9 @@
         margin-top:3%;
     }
     .dp-1-5 {
-        width: 17%;
+        width: 16vw;
         float: left;
+        cursor: pointer;
     }
 
     .pics_box {
