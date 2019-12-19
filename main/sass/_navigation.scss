@@ -82,9 +82,17 @@
         ul[class="navi-list"] {
             list-style: none;
             float: right;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width:60%;
+            height: 100%;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 1.5vw;
 
             li {
-                float: left;
+                // float: left;
 
                 a {
                     text-decoration: none;
@@ -93,9 +101,9 @@
 
 
                 font-size: 1.5vw;
-                margin-top: 2.5vw;
-                margin-left: 4vw;
-                margin-right: 4vw;
+                // margin-top: 2.5vw;
+                // margin-left: 4vw;
+                // margin-right: 4vw;
 
             }
 

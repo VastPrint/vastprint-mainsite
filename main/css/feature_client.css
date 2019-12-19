@@ -7,12 +7,17 @@
 
     .client_rung{
         width:85%;
-        padding-left: 15%;
+        padding-left: 10%;
+        transform: translateY(4vw);
         /*height: 20vh;*/
         font-size: 15vw;
         font-weight:800;
         font-family: 'Maven Pro', sans-serif;;
         color: black;
+
+
+       
+
     }
 
     .client_title{
@@ -38,6 +43,8 @@
     .client_bottom_blank{
         margin-bottom: 17vh;
     }
+
+    
 }
 @media screen and (min-width: 768px){
     .client_bg{
@@ -47,12 +54,17 @@
     }
     .client_rung{
         width:80%;
-        padding-left: 15%;
+        
+        padding-left: 10%;
+        transform: translateY(4vw) scale(1.5, 0.5);
+        
         /*height: 20vh;*/
         font-size: 10vw;
         font-weight:800;
         font-family: 'Maven Pro', sans-serif;;
         color: black;
+
+        
     }
 
     .client_title{
