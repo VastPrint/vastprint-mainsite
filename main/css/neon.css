@@ -98,7 +98,7 @@
     .neon-bg{
         position: relative;
         /*width:800px;*/
-        height:90vw;
+        height:80vw;
         background-color: #000000;
     }
     .neon-img1{
@@ -114,22 +114,22 @@
         position: absolute;
         width:20vw;
         /*height: 17vh;*/
-        right:4vw;
-        top:14vw;
+        right:10vw;
+        top:10vw;
     }
     .neon-img3{
         position: absolute;
         width:28vw;
         /*height: 17vh;*/
         left:1vw;
-        top:47vw;
+        top:40vw;
     }
     .neon-img4{
         position: absolute;
         width:23vw;
         /*height: 17vh;*/
-        right:18vw;
-        top:38vw;
+        right:25vw;
+        top:33vw;
         z-index: 1;
     }
     .float-img1{
@@ -137,17 +137,20 @@
         left:15vw;
         top:15vw;
         font-size: 11vw;
-        font-family: Monospaced;
+        /* font-family:'Roboto', sans-serif; */
         font-weight: bolder;
         letter-spacing: 0.02em;
         -webkit-text-stroke:8px #76f2f1;
         color: transparent;
+  
+     
+
         z-index: 2;
     }
     .float-img2{
         position: absolute;
-        right:20vw;
-        top:35vw;
+        right:25vw;
+        top:31vw;
         font-size: 12vw;
         font-weight: bolder;
         letter-spacing: 0.02em;
@@ -161,7 +164,7 @@
         /*height: 20vh;*/
         left:25vw;
         top:33vw;
-        font-size: 0.3vw;
+        font-size:1vw;
         color: white;
         z-index: 1;
     }
@@ -169,9 +172,9 @@
         position: absolute;
         width:13vw;
         /*height: 20vh;*/
-        right:11vw;
-        top:29vw;
-        font-size: 0.3vw;
+        right:17vw;
+        top:25vw;
+        font-size: 1vw;
         color: white;
         z-index: 1;
     }

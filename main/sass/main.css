@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro:900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Vampiro+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Dosis|Fjalla+One|Montserrat|Open+Sans+Condensed:300|Pinyon+Script|Sacramento|Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anton|Londrina+Outline&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -416,13 +416,26 @@
   .navigation ul[class="navi-list"] {
     list-style: none;
     float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 60%;
+    height: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 1.5vw;
   }
   .navigation ul[class="navi-list"] li {
-    float: left;
     font-size: 1.5vw;
-    margin-top: 2.5vw;
-    margin-left: 4vw;
-    margin-right: 4vw;
   }
   .navigation ul[class="navi-list"] li a {
     text-decoration: none;
@@ -644,8 +657,8 @@
   }
   .header .header-logo .header-logo-sub {
     font-size: 2.6vw;
-    -webkit-transform: translateY(-1vw);
-            transform: translateY(-1vw);
+    -webkit-transform: translateY(-1vw) translateX(0.5vw);
+            transform: translateY(-1vw) translateX(0.5vw);
   }
   .header .header-text {
     position: absolute;
@@ -991,36 +1004,36 @@
 
 .text-neon-red {
   color: #ffd8d8;
-  text-shadow: 0 0vw .25vw #ffd8d8, 0 0vw 0vw #f25757,  0 0vw .1vw #f25757,   0 0vw 2vw #f25757,   0 0vw 1vw #e50b0b,   0 0vw 5vw #e50b0b,  0 0vw 10vw #e50b0b;
+  text-shadow: 0 0vw .25vw #ffd8d8, 0 0vw 0vw #f25757,  0 0vw .1vw #f25757,   0 0vw 2vw #f25757,   0 0vw 1vw #e50b0b,   0 0vw 5vw #e50b0b,  0 0vw 10vw #e50b0b;
 }
 
 .text-neon-yellow {
   color: #fcfac1;
-  text-shadow: 0 0vw .25vw #fcfac1, 0 0vw 0vw #e7ff5c,  0 0vw .1vw #e7ff5c,   0 0vw 2vw #e7ff5c,   0 0vw 1vw #eeff00,   0 0vw 5vw #eeff00,  0 0vw 10vw #eeff00;
+  text-shadow: 0 0vw .25vw #fcfac1, 0 0vw 0vw #e7ff5c,  0 0vw .1vw #e7ff5c,   0 0vw 2vw #e7ff5c,   0 0vw 1vw #eeff00,   0 0vw 5vw #eeff00,  0 0vw 10vw #eeff00;
 }
 
 .text-neon-blue {
   color: #97d2fd;
-  text-shadow: 0 0vw .25vw #97d2fd, 0 0vw 0vw #3b9efa,  0 0vw .1vw #3b9efa,   0 0vw 2vw #3b9efa,   0 0vw 1vw #003cff,   0 0vw 5vw #003cff,  0 0vw 10vw #003cff;
+  text-shadow: 0 0vw .25vw #97d2fd, 0 0vw 0vw #3b9efa,  0 0vw .1vw #3b9efa,   0 0vw 2vw #3b9efa,   0 0vw 1vw #003cff,   0 0vw 5vw #003cff,  0 0vw 10vw #003cff;
 }
 
 .text-neon-green {
   color: #a0fd97;
-  text-shadow: 0 0vw .25vw #a0fd97, 0 0vw 0vw #6bfc58,  0 0vw .1vw #6bfc58,   0 0vw 2vw #6bfc58,   0 0vw 1vw #1eff00,   0 0vw 5vw #1eff00,  0 0vw 10vw #1eff00;
+  text-shadow: 0 0vw .25vw #a0fd97, 0 0vw 0vw #6bfc58,  0 0vw .1vw #6bfc58,   0 0vw 2vw #6bfc58,   0 0vw 1vw #1eff00,   0 0vw 5vw #1eff00,  0 0vw 10vw #1eff00;
 }
 
 .text-neon-white {
   color: #ffffff;
-  text-shadow: 0 0vw .25vw #ffffff, 0 0vw 0vw #ffffff,  0 0vw .1vw #ffffff,   0 0vw 2vw #ffffff,   0 0vw 1vw #ffffff,   0 0vw 5vw #ffffff;
+  text-shadow: 0 0vw .25vw #ffffff, 0 0vw 0vw #ffffff,  0 0vw .1vw #ffffff,   0 0vw 2vw #ffffff,   0 0vw 1vw #ffffff,   0 0vw 5vw #ffffff;
 }
 
 /*glow*/
 @keyframes neon-red {
   from {
-    text-shadow: 0 0 10px #fff,  0 0 20px #fff,  0 0 30px #fff,  0 0 40px #FF1177,  0 0 70px #FF1177,  0 0 80px #FF1177,  0 0 100px #FF1177,  0 0 150px #FF1177;
+    text-shadow: 0 0 10px #fff,  0 0 20px #fff,  0 0 30px #fff,  0 0 40px #FF1177,  0 0 70px #FF1177,  0 0 80px #FF1177,  0 0 100px #FF1177,  0 0 150px #FF1177;
   }
   to {
-    text-shadow: 0 0 5px #fff,  0 0 10px #fff,  0 0 15px #fff,  0 0 20px #FF1177,  0 0 35px #FF1177,  0 0 40px #FF1177,  0 0 50px #FF1177,  0 0 75px #FF1177;
+    text-shadow: 0 0 5px #fff,  0 0 10px #fff,  0 0 15px #fff,  0 0 20px #FF1177,  0 0 35px #FF1177,  0 0 40px #FF1177,  0 0 50px #FF1177,  0 0 75px #FF1177;
   }
 }
 
