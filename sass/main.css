@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro:900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Vampiro+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Dosis|Fjalla+One|Montserrat|Open+Sans+Condensed:300|Pinyon+Script|Sacramento|Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anton|Londrina+Outline&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -69,12 +70,30 @@
   }
 }
 
+@font-face {
+  font-family: FUTURAMC;
+  src: url("../fonts/FUTURAMC.TTF");
+}
+
+@font-face {
+  font-family: FUTURMCI;
+  src: url("../fonts/FUTURMCI.TTF");
+}
+
 .text-center {
   text-align: center;
 }
 
 .text-muted {
   color: grey;
+}
+
+.text-h2 {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.text-normal {
+  font-family: 'Lato', sans-serif;
 }
 
 .bg-red {
@@ -397,13 +416,26 @@
   .navigation ul[class="navi-list"] {
     list-style: none;
     float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 60%;
+    height: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 1.5vw;
   }
   .navigation ul[class="navi-list"] li {
-    float: left;
     font-size: 1.5vw;
-    margin-top: 2.5vw;
-    margin-left: 4vw;
-    margin-right: 4vw;
   }
   .navigation ul[class="navi-list"] li a {
     text-decoration: none;
@@ -625,8 +657,8 @@
   }
   .header .header-logo .header-logo-sub {
     font-size: 2.6vw;
-    -webkit-transform: translateY(-1vw);
-            transform: translateY(-1vw);
+    -webkit-transform: translateY(-1vw) translateX(0.5vw);
+            transform: translateY(-1vw) translateX(0.5vw);
   }
   .header .header-text {
     position: absolute;
@@ -684,8 +716,8 @@
 
 @media only screen and (min-width: 768px) {
   .customise .customise-canvas {
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 7vw;
+    padding-right: 2vw;
   }
 }
 
@@ -759,7 +791,7 @@
 @media only screen and (min-width: 768px) {
   .customise .customise-panel {
     padding-left: 5vw;
-    padding-right: 5vw;
+    padding-bottom: 3vw;
   }
 }
 
@@ -1189,6 +1221,24 @@
   }
 }
 
+.commercial .commercial-text .commerical-rung {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+  .commercial .commercial-text .commerical-rung {
+    -webkit-transform: translateX(3vw) scale(3, 1.5);
+            transform: translateX(3vw) scale(3, 1.5);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .commercial .commercial-text .commerical-rung {
+    -webkit-transform: translateX(1.5vw) scale(3, 1.5);
+            transform: translateX(1.5vw) scale(3, 1.5);
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .commercial [id*="commercial-img"] {
     width: 20vw;
@@ -1224,12 +1274,13 @@
 .contact {
   background-color: black;
   color: white;
-  padding: 10px;
+  padding: 50px 70px 70px 70px;
+  padding-bottom: 70px;
   font-family: 'Roboto', sans-serif;
 }
 
 .contact div > .contact-head {
-  font-size: 1rem;
+  font-size: 20px;
 }
 
 .contact div > .contact-text {
@@ -1258,7 +1309,7 @@
 }
 
 .footer {
-  background: #cccccc;
+  background: #f3f3f3;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -1296,8 +1347,8 @@
 
 @media only screen and (max-width: 768px) {
   .footer .foot-copyright {
-    padding-bottom: 5vw;
-    font-size: 3rem;
+    padding-bottom: 10vw;
+    font-size: 1.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
