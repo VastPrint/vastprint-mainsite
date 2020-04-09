@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="">
+    <title>VastPrint</title>
+
+
+    <link rel="stylesheet" href="sass/main.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/neon.css">
+    <link rel="stylesheet" href="css/feature_client.css">
+    <link rel="stylesheet" href="css/display_units.css">
+
+    <script src="js/font-select.js"></script>
+    <style>
+        .customise {
+    
+           height:100vh;
+           align-items: center;
+        }
+     
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="customise row ">
+        <div class="col-7 customise-canvas">
+
+            <div class="customise-canvas-head">
+                <h1>Custom Neon Sign</h1>
+            </div>
+            <div class="customise-canvas-body">
+                <div class="customise-canvas-phrase">
+                    <p id="neonSignShowcase">
+                        Neon Sign Sample
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-5 customise-panel">
+
+            <div class="customise-panel-size">
+                <lable>Neon Size</lable>
+                <div>
+
+                    <input type="radio" name="size" id="small" value="small">
+                    <label for="small" class="customise-size-btn">Small</label>
+
+                    <input type="radio" name="size" id="medium" value="medium" checked="checked">
+                    <label for="medium" class="customise-size-btn">Medium</label>
+
+                    <input type="radio" name="size" id="large" value="large">
+                    <label for="large" class="customise-size-btn">Large</label>
+                </div>
+            </div>
+
+            <div class="customise-panel-phrase">
+                <lable for="customise-phrase-text">Neon phrase</lable>
+                <div>
+                    <textarea id="customise-phrase-text" placeholder='Neon Sign Sample(Type in the text)'></textarea>
+                    <!-- <button class="customise-phrase-submit" id="try-btn">
+                        try
+                    </button> -->
+                </div>
+            </div>
+
+
+
+            <div class="customise-panel-font">
+
+                <lable for="customise-font-sel">Font</lable>
+
+                <div class="font-select">
+                    <a class="font-select-selected">
+                        <span class="font-select-selected-text">Select a font</span>
+                        <div class="font-select-icon">
+
+                        </div>
+                    </a>
+                    <div class="font-select-dropdown" style="display: none;">
+                        <ul class="font-select-list">
+                            <li class="font-select-item" value='Sacramento' style="font-family:'Sacramento', cursive;">Sacramento</li>
+                            <li class="font-select-item" value='Pinyon Script'
+                                style="font-family:'Pinyon Script', cursive;">Pinyon Script</li>
+                            <li class="font-select-item" value='Satisfy' style="font-family:'Satisfy', cursive;">Satisfy
+                            </li>
+                            <li class="font-select-item" value='Amatic SC' style="font-family:'Amatic SC', cursive;">
+                                Amatic SC</li>
+                            <li class="font-select-item" value='Dancing Script'
+                                style="font-family:'Dancing Script', cursive;">Dancing Script</li>
+                            <li class="font-select-item" value='Fjalla One'
+                                style="font-family:'Fjalla One', sans-serif;">Fjalla One</li>
+                            <li class="font-select-item" value='Dosis' style="font-family:'Dosis', sans-serif;">Dosis
+                            </li>
+                            <li class="font-select-item" value='Open Sans Condensed'
+                                style="font-family: 'Open Sans Condensed', sans-serif;">Open
+                                Sans Condensed</li>
+                            <li class="font-select-item" value='Montserrat'
+                                style="font-family: 'Montserrat', sans-serif;">Montserrat</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="customise-panel-color">
+                <lable></lable>
+
+                <div>
+
+                    <input type="radio" id="red" name="color" value="red" checked="checked"></input>
+                    <label for="red" class="customise-color-btn bg-red"></label>
+
+                    <input type="radio" id="yellow" name="color" value="yellow"></input>
+                    <label for="yellow" class="customise-color-btn bg-yellow"></label>
+
+                    <input type="radio" id="blue" name="color" value="blue"></input>
+                    <label for="blue" class="customise-color-btn bg-blue"></label>
+
+                    <input type="radio" id="green" name="color" value="green"></input>
+                    <label for="green" class="customise-color-btn bg-green"></label>
+
+                    <input type="radio" id="white" name="color" value="white"></input>
+                    <label for="white" class="customise-color-btn bg-white"></label>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -983,6 +983,10 @@
   }
 }
 
+.customise .customise-panel .customise-panel-color .customise-color-btn:hover {
+  cursor: pointer;
+}
+
 .text-neon-small {
   font-size: 3.5vw;
 }

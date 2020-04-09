@@ -90,6 +90,7 @@ const initFontSelect = () => {
 
     const fontSelectItem = document.getElementsByClassName('font-select-item');
     fontSelectedText.innerText = fontSelectItem[0].innerText;
+
     fontSelectedText.style.fontFamily = fontSelectItem[0].style.fontFamily;
 
     for (let i = 0; i < fontSelectItem.length; i++) {
